@@ -10,15 +10,18 @@ a:visited {
     margin-top: 50px;
     margin-left: 50px;
     background-color: orange;
+    position: fixed;
 }
 
 .kidFriendly {
     background: url('../img/kid2.jpg');
+    position: fixed;
 }
 
 .left-frame {
     background-color: green;
     margin-top: 100px;
+    position: fixed;
 }
 
 .lotusTemple {
@@ -27,15 +30,18 @@ a:visited {
 	font-family: Arial, sans-serif;
     background: url('../img/lotus2.jpg');
     margin-left: 100px;
+    position: fixed;
 }
 
 .museum {
     background: url('../img/museum1.jpg');
+    position: fixed;
 }
 
 .redFort {
     background: url('../img/redfort3.jpg');
     margin-left: 100px;
+    position: fixed;
 }
 
 .cutting {
@@ -45,41 +51,92 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     clip-path: polygon(100% 0%,100% 75%, 50% 100%, 0 75%, 0 0%);
-    position: relative;
+    position: fixed;
 }
 
 .redFort {
     background-color: orange;
+    position: fixed;
 }
 
 .shopping {
     background: url('../img/shopping1.jpg');
+    position: fixed;
 }
 
-.topFrame {
+/* .topFrame {
     background-color: brown;
-}
+} */
 
-.navbar {
+/* .navbar {
 	float: left;
     padding: 12px;
     color: white;
     font-size: 20px;
-}
+} */
 
-.active {
+/* .active {
 	background-color:orchid;
 }
 
 .sclass {
 	background-color: green;
 }
-
+ 
 .contact {
     background: url('../img/flower.jpg');
 }
 
 .registration {
     background-color: pink;
+} */
+
+
+/* ----------------- added Css Code -------------------- */
+
+*
+{ 
+    margin: 0;
+    padding: 0;
+}
+
+.topFrame{
+    background: #1d4052;
+    color: #fff;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-bottom: auto;
+    
+}
+
+.navbar{
+    text-align: right;
+}
+
+h1{
+    margin: 20px;
+}
+ul li{
+    display: inline-block;
+    margin: 25px;
+    list-style: none;
+    cursor: pointer;
+}
+span{
+    margin: 0 20px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width: 700px){
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
 }
 
