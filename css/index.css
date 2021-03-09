@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
 .home {
     background-color: orange;
 }
@@ -79,7 +85,50 @@ a:visited {
     background: url('../img/flower.jpg');
 }
 
-.registration {
-    background-color: pink;
+.registration{
+ background-color: pink;
+ width: 100vw;
+ height: 80vh;
+ margin-top: 5rem;
+}
+.registration .Section{
+max-width: 50%;
+max-height: 30px;
+text-align: center;
+
+}
+.fromid{
+width: 45%;
+height: 57vh;
+border: 3px solid black;
+background-image: linear-gradient(to top, red , yellow);
+margin: 2rem auto;
+}
+.fromid input{
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    border-radius: 1em;
+}
+#Checkbox{
+ width: 20px;
+ max-height: 10px;
+ margin: 1rem 0.5rem;
 }
 
+.fromid button{
+    background-color: #4266b2;
+    border-color: #4266b2;
+    color: #fff;  
+    margin: auto 0.5rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out; 
+}
+
+.fromid input:hover{
+    border: none;
+    user-select: none;
+}
