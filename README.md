@@ -11,7 +11,7 @@ Before contributing to this project make sure to go through the Readme.md and co
 - JavaScript
 
 ### Hop In To This Project ✨
-Read our contributing file to know how you can get started with cloning this project to your system and start working on it.
+Read our [contributing](/contributing.md) file to know how you can get started with cloning this project to your system and start working on it.
 
 ## Open-source Programs 👾
 ### This Project is a part of the following Open Source Program
