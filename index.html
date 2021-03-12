@@ -6,9 +6,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+
     <title>Delhi Tourism</title>
 </head>
+<style>
+.background{
+    background-image: url("https://assets.weforum.org/article/image/large_Gq4a4SoiqGn5D0EiK7t0RGkPVJSPXhK-2cobggsv2L8.JPG");
+    min-height: 400px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.w3-tangerine {
+            font-family: "Tangerine", serif;
+            font-size: 40px;
+            
+        }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
 
+/* Set a style for all buttons */
+button {
+    display:block;
+  margin:0 auto;
+  width:260px;
+  height:36px;
+  border-radius:30px;
+  color:#fff;
+  font-size: 15px;
+  cursor:pointer;
+}
+.submit{
+  margin-top:40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Nunito',sans-serif;
+  background: -webkit-linear-gradient(left,#7579ff,#b224ef);
+}
+.submit:hover{
+  background: -webkit-linear-gradient(left,#b224ef,#7579ff);
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+
+.container {
+  padding: 16px;
+  background-image: url("https://wallpaperaccess.com/full/1896134.jpg");
+}
+
+.span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  border-radius: 10px;
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 2px solid white;
+  width: 60%; /* Could be more or less, depending on screen size */
+  
+}
+
+.si{
+  background-color: rgb(0,0,0,0.5);
+  border-radius: 10px;  
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color:white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+</style>
 <body>
 
     <section class="topFrame">
@@ -20,7 +155,7 @@
             <a class="sclass" href="aboutus.html" target="pooja">
                 <font size="4" color="WHITE">ABOUT </font>
             </a>
-            <a class="active" href="registration.html" target="pooja">
+            <a class="active" href="#bottom">
                 <font size="4" z color="WHITE">REGISTRATION</font>
             </a>
             <a class="sclass" href="contact.html" target="pooja">
@@ -249,34 +384,60 @@
     </section>
 
     <section class="registration">
-        <form>
-            <h1 align="CENTER"> REGISTRATION </h1>
-            FIRST NAME : <input type="text" name="FIRST_NAME">
-            <BR> <br>
-            LASTNAME : <input type="text" name="LAST_NAME">
-            <br><br>
-            USER ID : <input type="text" name="userid">
-            <br><br>
-            PASSWORD: <input type="password" name="password">
-            <br><br>
-
-            GENDER:<br>
-            <input type="radio" name="MEN"> MALE
-            <br>
-            <input type="radio" name="FEMALE"> FEMALE
-            <br>
-            <input type="radio" name="OTHER"> OTHERS
-            <br>
-            <br>
-            DESCRIPTION:<br>
-            <textarea rows="5" cols="50" name="enter description">
-              </textarea>
-            <br>
-            <br>
-            <CENTER>
-                <button> submit </button>
-            </CENTER>
-        </form>
+        <div class="background" id="bottom">
+            <div class="w3-tangerine">
+                <br />
+                <p style="font-size: 3ch; color:black ;text-align: center;">
+                   <b> We welcome you to the world only meant for TRAVEL!<br/>
+                    <p style="color: black ;text-align: center;">Register yourself to indulge in the mesmerizing scenes of Delhi!!</p></b>
+                </p>  
+        
+        <button style="font-family: cursive;" type="button" class="submit" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">REGISTER</button>
+        
+        <div id="id01" class="modal">
+          
+          <form class="modal-content animate" action="/action_page.php"  method="post">
+            
+        
+            <div class="container"  style="font-family: cursive; font-size: 1.5ch;">
+              <label for="fname" style="color:white"><b>First Name</b></label>
+              <input type="text" class="si" style="color: white;" placeholder="Enter First Name" name="fname" required>
+        
+              <label for="lname" style="color:white"><b>Last Name</b></label>
+              <input type="text" class="si" style="color: white;" placeholder="Enter Last Name" name="lname" required>
+              
+              <label for="userid" style="color:white"><b>User ID</b></label>
+              <input type="text" class="si" style="color: white;" placeholder="Enter UserID" name="userid" required>
+                
+              <label for="psw" style="color:white"><b>Password</b></label>
+              <input type="password" class="si" style="color: white;" placeholder="Enter Password" name="pwd" required>
+                
+              <label for="gender" style="color:white"><b>Gender</b></label>
+              <br />
+              <input type="radio" name="gender" style="color:white"> <span style="color: white;">Male</span>
+                    <br>
+                    <input type="radio" name="gender" style="color:white"> <span style="color: white;">Female</span>
+                    <br>
+                    <input type="radio" name="gender" style="color:white"> <span style="color: white;">Others</span>
+                    <br>
+                    <br>
+                    <label>
+                      <input type="checkbox"  checked="checked" name="remember" > <span style="color: black">Remember Me!</span>
+                    </label>
+                    
+              <button type="submit" class="submit">Submit</button>
+              
+            </div>
+        
+            <div style="background-color:black; padding: 10px;">
+              
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              
+            </div>
+          </form>
+        </div>
+        </div>
+    
     </section>
 </body>
 
