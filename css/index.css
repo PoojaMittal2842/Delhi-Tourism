@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 .home {
     background-color: orange;
 }
@@ -81,5 +85,61 @@ a:visited {
 
 .registration {
     background-color: pink;
+    padding: 1em 0;
 }
 
+.container {
+    width: 40%;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box .input input {
+    border: none;
+    width: 240px
+}
+
+.box textarea {
+    border: none;
+}
+
+.box .label {
+    color: rgb(71, 69, 69);
+}
+
+.box .input input:focus, 
+textarea:focus {
+    outline: none;
+}
+
+.box1, 
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+    margin: 0.7em 0;
+}
+
+
+::placeholder {
+    color: lightgray;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+::-ms-input-placeholder {
+    color: lightgray;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+:-ms-input-placeholder {
+    color: lightgray;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
