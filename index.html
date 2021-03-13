@@ -10,8 +10,15 @@
     <title>Delhi Tourism</title>
 </head>
 
-<body>
+<body onload="myFunction()" style="margin:0;">
 
+    
+    <!-- preloader -->
+    <div id="container">
+        <div id="loader"></div>  
+    </div>
+     
+    <div style="display:none;" id="myDiv" class="animate-bottom">
     <section class="topFrame">
        <nav class="navbar navbar-expand-lg navbar-light bg-light nv">
             <div class="container-fluid">
@@ -279,6 +286,20 @@
             </CENTER>
         </form>
     </section>
+    </div>
 </body>
+
+<script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+</script>
 
 </html>
