@@ -3,7 +3,14 @@
 }
 
 a:visited {
-        color: blue;
+    color: blue;
+}
+
+.topimg img {
+    padding: 10px;
+    padding-bottom: 20px;
+    width: 250px;
+    height: 200px
 }
 
 .aboutUs {
@@ -23,8 +30,8 @@ a:visited {
 
 .lotusTemple {
     text-align: center;
-	font-size: 5px;
-	font-family: Arial, sans-serif;
+    font-size: 5px;
+    font-family: Arial, sans-serif;
     background: url('../img/lotus2.jpg');
     margin-left: 100px;
 }
@@ -41,11 +48,18 @@ a:visited {
 .cutting {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3), rgba(125, 60, 152));
+    background-image: linear-gradient(rgba(0, 168, 255, 0.3), rgba(0, 168, 255, 0.3), rgba(125, 60, 152));
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    clip-path: polygon(100% 0%,100% 75%, 50% 100%, 0 75%, 0 0%);
+    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0%);
     position: relative;
+}
+
+.cutting .tabimg tr img {
+    padding: 10px;
+    padding-top: 30px;
+    width: 250px;
+    height: 200px;
 }
 
 .redFort {
@@ -61,18 +75,18 @@ a:visited {
 }
 
 .navbar {
-	float: left;
+    float: left;
     padding: 12px;
     color: white;
     font-size: 20px;
 }
 
 .active {
-	background-color:orchid;
+    background-color: orchid;
 }
 
 .sclass {
-	background-color: green;
+    background-color: green;
 }
 
 .contact {
@@ -82,4 +96,3 @@ a:visited {
 .registration {
     background-color: pink;
 }
-

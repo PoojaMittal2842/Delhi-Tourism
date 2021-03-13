@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <title>Delhi Tourism</title>
 </head>
@@ -13,23 +13,23 @@
 <body>
 
     <section class="topFrame">
-       <nav class="navbar navbar-expand-lg navbar-light bg-light nv">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nv">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  <a class="nav-link" href="/about.html">About</a>
-                  <a class="nav-link" href="">Registration</a>
-                  <a class="nav-link" href="">Contact</a>
-                  
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="/about.html">About</a>
+                        <a class="nav-link" href="">Registration</a>
+                        <a class="nav-link" href="">Contact</a>
+
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </section>
 
     <section class="home">
@@ -47,7 +47,7 @@
             <font color="white"><b>The capital city of <font color="yellow">!NDIA..!!</font></b>
         </marquee>
         <hr>
-        <table cellspacing="50">
+        <table cellspacing="50" align="center" class="topimg">
             <tr>
                 <td> <img src="img/lotus1.jpg" width="200" height="200"></td>
                 <td> <img src="img/shopping.jpg" width="200" height="200"></td>
@@ -200,7 +200,7 @@
         </marquee>
         <hr>
         <div class="cutting">
-            <table cellspacing="50" align="center">
+            <table cellspacing="50" align="center" class="tabimg">
                 <tr>
                     <td> <img src="img/lotus1.jpg" width="200" height="200"></td>
                     <td> <img src="img/shopping.jpg" width="200" height="200"></td>
@@ -253,29 +253,26 @@
         <form>
             <h1 align="CENTER"> REGISTRATION </h1>
             FIRST NAME : <input type="text" name="FIRST_NAME">
-            <BR> <br>
-            LASTNAME : <input type="text" name="LAST_NAME">
-            <br><br>
-            USER ID : <input type="text" name="userid">
-            <br><br>
-            PASSWORD: <input type="password" name="password">
-            <br><br>
+            <BR> <br> LASTNAME : <input type="text" name="LAST_NAME">
+            <br><br> USER ID : <input type="text" name="userid">
+            <br><br> PASSWORD: <input type="password" name="password">
+            <br><br> GENDER:
 
-            GENDER:<br>
+            <br>
             <input type="radio" name="MEN"> MALE
             <br>
             <input type="radio" name="FEMALE"> FEMALE
             <br>
             <input type="radio" name="OTHER"> OTHERS
             <br>
+            <br> DESCRIPTION:
             <br>
-            DESCRIPTION:<br>
             <textarea rows="5" cols="50" name="enter description">
               </textarea>
             <br>
             <br>
             <CENTER>
-               <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary">Submit</button>
             </CENTER>
         </form>
     </section>
