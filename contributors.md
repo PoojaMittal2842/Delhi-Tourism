@@ -1,12 +1,14 @@
 # Guidelines
 
 # TECHNOLOGY STACK:
-● Front End:
+
+### ● Front End:
 1. HTML
 2. CSS
 3. JavaScript
-4. Bootstrap (Any framework of choice)
-● Back End:
+4. Bootstrap (Any framework of choice
+
+### ● Back End:
 a. Node.js
 b. MongoDB
 c. Ejs (Embedded JavaScript)
@@ -71,5 +73,4 @@ by other users
 app
 ### ● Responsive web design
 ### ● Ability to add multiple pictures for a place as a carousel
-### ● Ticket Booking page for booking tickets with pass and
-paymen
+### ● Ticket Booking page for booking tickets with pass and payments
