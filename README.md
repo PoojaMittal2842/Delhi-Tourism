@@ -23,6 +23,6 @@ Read our [contributing](/contributors.md) file to know how you can get started w
 
 <p align="center">
   <a href="https://gssoc.girlscript.tech/"  target="_blank"> 
-    <img src="img/gssoc.png" alt="GSSoC" /> 
+    <img src="gssoc.png" alt="GSSoC" /> 
   </a>
 </p>
