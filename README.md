@@ -22,7 +22,7 @@ Read our [contributing](/contributors.md) file to know how you can get started w
 ### This Project is a part of the following Open Source Program
 
 <p align="center">
-<a href="https://gssoc.girlscript.tech/"  target="_blank"> 
-  <img src="img/gssoc.png" alt="GSSOC" /> 
-</a>
+  <a href="https://gssoc.girlscript.tech/"  target="_blank"> 
+    <img src="img/gssoc.png" alt="GSSoC" /> 
+  </a>
 </p>
