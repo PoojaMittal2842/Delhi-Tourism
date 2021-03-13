@@ -1,6 +1,6 @@
-## Guidelines
+# Guidelines
 
-### TECHNOLOGY STACK:
+# TECHNOLOGY STACK:
 ● Front End:
 1. HTML
 2. CSS
@@ -12,7 +12,7 @@ b. MongoDB
 c. Ejs (Embedded JavaScript)
 d. Express
 
-### PROJECT FUNCTIONALITIES​:
+# PROJECT FUNCTIONALITIES​:
 ## Pages:
 1. Index Page
 2. Browse Places Page (With search bar)
@@ -31,14 +31,14 @@ d. Express
 The execution phases are categorized into 3 phases
 ## 1. UI design
 
-## 2. Back-end Integration with basic functions
+### 2. Back-end Integration with basic functions
 a. Add Place
 b. Edit and Update
 c. Login and Register
 d. Comment on Posts
 
 
-## 3. Back-end integration with intermediate functions
+### 3. Back-end integration with intermediate functions
 a. Change password
 b. Add User profile page
 c. Edit and Update user profile
@@ -49,27 +49,27 @@ g. Admin Privileges
 h. Payment integration
 i. PDF version of pass after booking
 
-# 4. Final security and code changeFeatures:
-● Authentication:
+### 4. Final security and code changeFeatures:
+### ● Authentication:
 ○ User login with username and password
 ○ Admin sign-up with admin code
-● Authorization:
+### ● Authorization:
 ○ One cannot manage posts and view user profile without
 being authenticated
-○ One cannot edit or delete posts and comments created
+ ○ One cannot edit or delete posts and comments created
 by other users
-○ Admin can manage all posts and comments
-● Manage posts with basic functionalities:
+ ○ Admin can manage all posts and comments
+### ● Manage posts with basic functionalities:
 ○ Create, edit and delete posts and comments
 ○ Upload places photos
 ○ Display places location on Google Maps
 ○ Search existing campgrounds
-● Manage user account with basic functionalities:
+### ● Manage user account with basic functionalities:
 ○ Password reset via email confirmation
 ○ Profile page setup with sign-up
-● Flash messages responding to users' interaction with the
+### ● Flash messages responding to users' interaction with the
 app
-● Responsive web design
-● Ability to add multiple pictures for a place as a carousel
-● Ticket Booking page for booking tickets with pass and
+### ● Responsive web design
+### ● Ability to add multiple pictures for a place as a carousel
+### ● Ticket Booking page for booking tickets with pass and
 paymen
