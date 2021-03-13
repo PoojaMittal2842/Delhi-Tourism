@@ -8,8 +8,8 @@ a:visited {
 
 .aboutUs {
     margin-top: 50px;
-    margin-left: 50px;
     background-color: orange;
+    padding-bottom: 5px;
 }
 
 .kidFriendly {
@@ -35,7 +35,7 @@ a:visited {
 
 .redFort {
     background: url('../img/redfort3.jpg');
-    margin-left: 100px;
+    padding-bottom: 5px;
 }
 
 .cutting {
