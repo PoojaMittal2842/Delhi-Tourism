@@ -9,6 +9,11 @@ Before contributing to this project make sure to go through the Readme.md and co
 - HTML
 - CSS
 - JavaScript
+- Bootstrap 
+- Node.js
+- MongoDB
+- ejs
+- Express
 
 ### Hop In To This Project ✨
 Read our [contributing](/contributing.md) file to know how you can get started with cloning this project to your system and start working on it.
