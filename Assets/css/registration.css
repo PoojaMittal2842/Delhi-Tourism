@@ -1,0 +1,65 @@
+
+body {
+    min-height: 100vh;
+}
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+span .fa-check {
+	color: #fff;
+	left: 42px;
+	top: 25px;
+	font-size: 5px;
+	position: absolute;
+}
+
+
+.social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    color: #9fadca;
+}
+
+.social-icons{
+    margin: 16px 0;
+    /* margin-bottom: 16px; */
+}
+
+.social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
