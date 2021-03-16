@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+.home {
+    background-color: orange;
+}
+
+/* Main Section Statrt */
+.main-container{
+    width: 100%;
+    height: 100vh;
+    margin: 2rem auto;
+    text-align: center;
+  font-size: large;
+ }
+.main-container h1{
+   padding: 1rem;
+  
+}
+.container{
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 1fr;
+    grid-gap: 0.5rem;    
+}
+
+.images-content{
+    width: 250px;
+   height: 250px;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.images-content .imgdetails{
+
+    max-width: 100%;
+    max-height: max-content;
+    margin: auto;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    line-height: 25px;
+    text-align: center;
+    -webkit-transition: top 0.5s;
+    transform: scale(0);
+}
+.images-content .imgdetails h1 {
+    padding: 1rem;
+}
+.images-content .imgdetails h1 a{
+    color: white;
+    border-bottom: 2px solid white ;
+    text-decoration: none;
+}
+.images-content:hover>.imgdetails{
+   
+    top: 10%;
+    transform: scale(1);
+    background-color: rgb(56,56,56);
+    color: white;
+    
+}
+
+@media (min-width:351px) and (max-width:750px) {
+    .container{
+    width: 100%;
+        grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px 1fr;
+}
+
+
+}
+/* main section end  */
+
+.aboutUs {
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: orange;
+}
+
+.kidFriendly {
+    background: url('../img/kid2.jpg');
+}
+
+.left-frame {
+    background-color: green;
+    margin-top: 100px;
+}
+
+.lotusTemple {
+    text-align: center;
+	font-size: 5px;
+	font-family: Arial, sans-serif;
+    background: url('../img/lotus2.jpg');
+    margin-left: 100px;
+}
+
+.museum {
+    background: url('../img/museum1.jpg');
+}
+
+.redFort {
+    background: url('../img/redfort3.jpg');
+    margin-left: 100px;
+}
+
+.cutting {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3), rgba(125, 60, 152));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%,100% 75%, 50% 100%, 0 75%, 0 0%);
+    position: relative;
+}
+
+.redFort {
+    background-color: orange;
+}
+
+.shopping {
+    background: url('../img/shopping1.jpg');
+}
+
+.topFrame {
+    background-color: brown;
+}
+
+.navbar {
+	float: left;
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+}
+
+.active {
+	background-color:orchid;
+}
+
+.sclass {
+	background-color: green;
+}
+
+.contact {
+    background: url('../img/flower.jpg');
+}
+
+.registration{
+ background-color: pink;
+ width: 100vw;
+ height: 80vh;
+ margin-top: 5rem;
+}
+.registration .Section{
+max-width: 50%;
+max-height: 30px;
+text-align: center;
+
+}
+.fromid{
+width: 45%;
+height: 57vh;
+border: 3px solid black;
+background-image: linear-gradient(to top, red , yellow);
+margin: 2rem auto;
+}
+.fromid input{
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    border-radius: 1em;
+}
+#Checkbox{
+ width: 20px;
+ max-height: 10px;
+ margin: 1rem 0.5rem;
+}
+
+.fromid button{
+    background-color: #4266b2;
+    border-color: #4266b2;
+    color: #fff;  
+    margin: auto 0.5rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out; 
+}
+
+.fromid input:hover{
+    border: none;
+    user-select: none;
+}
