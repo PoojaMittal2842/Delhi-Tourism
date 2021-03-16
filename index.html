@@ -1,331 +1,528 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
     <title>Delhi Tourism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="Assets/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="Assets/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="Assets/css/magnific-popup.css">
+
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="Assets/css/flexslider.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Assets/css/owl.theme.default.min.css">
+
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="Assets/fonts/flaticon/font/flaticon.css">
+
+    <!-- FontAwsome Icons -->
+    <link rel="stylesheet" href="Assets/css/all.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="Assets/js/modernizr-2.6.2.min.js"></script>
+
 </head>
 
 <body>
+    <div class="colorlib-loader"></div>
 
-    <section class="topFrame">
-        <div class="navbar" <center>
+    <div id="page">
+        <nav class="colorlib-nav" role="navigation">
+            <div class="top-menu">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <div id="colorlib-logo"><a href="index.html">Delhi Tourism</a></div>
+                        </div>
+                        <div class="col-xs-10 text-right menu-1">
+                            <ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="has-dropdown">
+                                    <a href="#">Tour</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">World Famous</a></li>
+                                        <li><a href="#">Family Spots</a></li>
+                                        <li><a href="#">Couple Spots</a></li>
+                                        <li><a href="#">Nature's Beauty</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <aside id="colorlib-hero">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li style="background-image: url(Assets/images/cover-img-1.jpg);">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h2>2 Days Tour</h2>
+                                        <h1>Amazing Delhi Tour</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url(Assets/images/img_bg_2.jpg);">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h2>10 Days Long Vaccation</h2>
+                                        <h1>From any State to Delhi</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url(Assets/images/tour-3.jpg);">
+                        <div class="overlay"></div>
+                        <div class="container-fluids">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h2>Explore some of the Enormous Place</h2>
+                                        <h1>World Famous Tourist Spots</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url(Assets/images/tour-1.jpg);">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h2>Experience the</h2>
+                                        <h1>Heart of India</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 
-            <a class="active" href="home.html" target="pooja">
-                <font size="4" color="WHITE">HOME </font>
-            </a>
-            <a class="sclass" href="aboutus.html" target="pooja">
-                <font size="4" color="WHITE">ABOUT </font>
-            </a>
-            <a class="active" href="registration.html" target="pooja">
-                <font size="4" z color="WHITE">REGISTRATION</font>
-            </a>
-            <a class="sclass" href="contact.html" target="pooja">
-                <font size="4" color="WHITE">CONTACT</font>
-            </a>
-
-            </center>
-        </div>
-    </section>
-
-    <section class="home">
-        <center>
-            <table>
-                <tr>
-                    <th>
-                        <h1> <img src="img/delhi.jpg" width="150" height="100" align="center"> DELHI TOURISINM </h1>
-                    </th>
-                </tr>
-            </table>
-        </center>
-        <hr>
-        <marquee bgcolor="BLACK">
-            <font color="white"><b>The capital city of <font color="yellow">!NDIA..!!</font></b>
-        </marquee>
-        <hr>
-    </section>
-
-    <!-- Main Section Start -- by Using Grid System Ggsoc21 -->
-
-    <div class="main-container">
-        <Samp class="main-container-content">
-            <h1> Best Visiting Places in Delhi </h1>
-        </Samp>
+    <div id="colorlib-services">
         <div class="container">
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href="">India Gate</a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga</p>
-                </span>
-                <img src="img/delhi.jpg" alt="Delhi" width="100%" height="100%">
-            </div>
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href=""> KIDS Park </a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga</p>
-                </span>
-                <img src="img/kid1.jpg" alt="flower" width="100%" height="100%">
-            </div>
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href=""> Museum </a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga</p>
-                </span>
-                <img src="img/museum.jpg" alt="redfort1" width="100%" height="100%">
-            </div>
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href=""> SHOPPING</a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga</p>
-                </span>
-                <img src="img/shopping1.jpg" alt="shopping" width="100%" height="100%">
-            </div>
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href=""> Lotus Temple </a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga</p>
-                </span>
-                <img src="img/lotus2.jpg" alt="shopping" width="100%" height="100%">
-            </div>
-            <div class="images-content">
-                <span class="imgdetails">
-                    <h1><a href=""> Garden of Five Senses </a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsam,
-                        accusantium sed tempore libero velit optio reiciendis fuga
-                        Lorem ipsum</p>
-                </span>
-                <img src="img/Garden of Five Senses.jpg" alt="shopping" width="100%" height="100%">
+            <div class="row no-gutters">
+                <div class="col-md-3 animate-box text-center aside-stretch">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="fas fa-plane-departure"></i>
+							</span>
+                        <h3>Amazing Trip</h3>
+                        <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort mosque
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="fas fa-heartbeat"></i>
+							</span>
+                        <h3>The Beat of Heart</h3>
+                        <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort mosque
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="fas fa-car"></i>
+							</span>
+                        <h3>Tourist Place</h3>
+                        <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort mosque
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="fas fa-skating"></i>
+							</span>
+                        <h3>Activities</h3>
+                        <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort mosque
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Main Section End -->
-    
-    <section class="frame">
-        <frameset rows="10% , 90%">
-            <frame src="webpages\topframe.html" name="rightframe"></frame>
 
-            <frameset cols="20%,80%">
-                <frame src="webpages\leftframe.html" name=leftframe></frame>
-                <frame src="webpages\home.html" name="pooja"></frame>
-            </frameset>
-
-        </frameset>
-    </section>
-
-    <section class="artandculture">
-        <table cellspacing="50">
-
-            <tr>
-                <th>
-                    <a href="redfort.html">
-                        <img width="200" height="200" src="img/redfort1.jpg"><br> RED FORT
-                    </a>
-                </th>
-
-
-
-                <th>
-                    <a href="lotustemple.html">
-                        <img width="200" height="200" src="img/lotus1.jpg"> <br> LOTUS TEMPLE
-                    </a>
-                </th>
-            </tr>
-        </table>
-    </section>
-
-    <section class="aboutUs">
-        <center>
-            <h1> ABOUT </h1>
-        </center>
-
-        <font size="3">
-            <em>
-                <big> Delhi </big> , officially the National Capital Territory of Delhi (NCT), is a city and a union
-                territory of India containing New Delhi, the capital of India.It is bordered by the state of Haryana on
-                three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq
-                mi). According to the 2011 census, Delhi's city proper population was over 11 million, the
-                second-highest in India after Mumbai, while the whole NCT's population was about 16.8 million. Delhi's
-                urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite
-                cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area now called National Capital Region (NCR)
-                and had an estimated 2016 population of over 26 million people, making it the world's second-largest
-                urban area according to the United Nations.As of 2016, recent estimates of the metro economy of its
-                urban area have ranked Delhi either the most or second-most productive metro area of India. Delhi is the
-                second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires.
-                Delhi ranks fifth among the Indian states and union territories in human development index.[14] Delhi
-                has the second-highest GDP per capita in India. It is one of the world's most polluted cities by
-                particulate matter concentration.
-            </em>
-        </font>
-
-    </section>
-
-    <section class="kidFriendly">
-
-    </section>
-
-    <section class="left-frame">
-        <a href="artandculture.html" target="pooja">
-            <font size="5" color="black"> <strong> <i> ART AND CULTURE </i> </strong> </font>
-        </a>
-        <br><br><br><br>
-        <a href="museum.html" target="pooja">
-            <font size="5" color="black"> <strong> <i> MUSEUM </i></strong> </font>
-        </a>
-        <br><br><br><br>
-        <a href="shopping.html" target="pooja">
-            <font size="5" color="black"> <strong> <i>SHOPPING </i></strong> </font>
-        </a>
-        <br><br><br><br>
-        <a href="kidfriendly.html" target="pooja">
-            <font size="5" color="black"> <strong> <i> KIDS FRIENDLY </i> </strong> </font>
-        </a>
-        <br><br>
-    </section>
-
-    <section class="lotusTemple">
-        <h1> LOTUS TEMPLE</h1>
-        <hr>
-        <i>
-            The <sup>Lotus Temple </sup>, located in Delhi, India, is a Baháʼí House of Worship that was dedicated in
-            December 1986. Notable for its flowerlike shape, it has become a prominent attraction in the city. Like all
-            Baháʼí Houses of Worship, the Lotus Temple is open to all, regardless of religion or any other
-            qualification. The building is composed of 27 free-standing marble-clad "petals" arranged in clusters of
-            three to form nine sides, with nine doors opening onto a central hall with a height of slightly over 34.27
-            metres and a capacity of 2,500 people. The Lotus Temple has won numerous architectural awards and has been
-            featured in many newspaper and magazine articles. A 2001 CNN report referred to it as the most visited
-            building in the world.
-        </i>
-        </font>
-    </section>
-
-    <section class="museum">
-
-    </section>
-
-    <section class="redFort">
-        <h1 align="center"> RED FORT </font>
-        </h1>
-        <hr>
-        <p>
-
-            <font size="4">
-                <i> The Red Fort is a historic fort in the city of Delhi in India that served as the main residence of
-                    the Mughal Emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1638,
-                    when he decided to shift his capital from Agra to Delhi. Originally red and white, Shah Jahan's
-                    favourite colours, its design is credited to architect Ustad Ahmad Lahori, who also constructed the
-                    Taj Mahal. It was constructed between May 1639 and April 1648. On 15 August 1947, the first prime
-                    minister of India, Jawaharlal Nehru, raised the Indian national flag above the Lahori Gate. Every
-                    year on India's Independence Day, the prime minister hoists the Indian "tricolour flag" at the
-                    fort's main gate and delivers a nationally broadcast speech from its ramparts.
-                </i>
-            </font>
-        </p>
-    </section>
-
-    <section class="ruchi">
-        <center>
-            <table>
-                <tr>
-                    <th>
-                        <h1> <img src="img/delhi.jpg" width="150" height="100" align="center"> DELHI TOURISM </h1>
-                    </th>
-                </tr>
-            </table>
-        </center>
-        <hr>
-        <marquee bgcolor="BLACK">
-            <font color="white"><b>The capital city of <font color="yellow">!NDIA..!!</font></b>
-        </marquee>
-        <hr>
-        <div class="cutting">
-            <table cellspacing="50" align="center">
-                <tr>
-                    <td> <img src="img/lotus1.jpg" width="200" height="200"></td>
-                    <td> <img src="img/shopping.jpg" width="200" height="200"></td>
-                    <td> <img src="img/amusement.jpg" width="200" height="200"></td>
-                </tr>
-                <tr>
-                    <td> <img src="img/museum.jpg" width="200" height="200"></td>
-                    <td> <img src="img/kid.jpg" width="200" height="200"></td>
-                    <td> <img src="img/redfort3.jpg" width="200" height="200"></td>
-                </tr>
-
-
-            </table>
+    <div class="colorlib-tour colorlib-light-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <h2>Popular Destination</h2>
+                    <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque,
+                        whose courtyard accommodates 25,000 people.</p>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section class="shopping">
-
-    </section>
-
-    <section class="contact">
-        <center>
-            <table cellspacing="25" cellpadding="25" border="5" bgcolor="white">
-                <tr>
-                    <h1>
-                        <font color="maroon"> DETAILS </font>
-                        <h1>
-                </tr>
-                <tr>
-                    <td> <strong> <i> PHONE NUMBER </i></strong></td>
-                    <!--strong tag is used for bold text-->
-                    <td> <strong> <i>2346787177 </i></strong></td>
-                </tr>
-                <tr>
-                    <td><strong> <i> EMAIL</td>
-                    <td> <a href=mailto: poojamittal@gmail.com> <strong> <i>poojamittal2842@gmail.com </i></strong></a>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td> <strong> <i>ADDRESS </i></strong> </td>
-                    <td> <strong> <i>h-16 talimabad , new delhi - 62 </i></strong> </td>
-                </tr>
-
-            </table>
-        </center>
-    </section>
-
-    <div class="registration">
-
-
-
-        <div class="Section">
-            <h1> Registration</h1>
-            <h6>Please Fill the Form its mandatory</h6>
+        <div class="tour-wrap">
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-1.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Red Fort</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-2.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Outab Minar</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-3.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Humayun's Tomb</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-4.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Jama Masjid</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-5.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>India Gate</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-6.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Lotus Temple</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-7.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Lodhi Garden</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
+            <a href="#" class="tour-entry animate-box">
+                <div class="tour-img" style="background-image: url(Assets/images/tour-8.jpg);">
+                </div>
+                <span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                <h2>Rashtrapati Bhavan</h2>
+                <span class="city">Delhi</span>
+                <span class="price">See More</span>
+                </span>
+            </a>
         </div>
-
-        <form action="" class="fromid">
-
-            <div>
-                <input type=" email" placeholder="Email-Id" required>
-            </div>
-
-            <div>
-                <input type="password" placeholder="Passowrd" required>
-
-            </div>
-            <div>
-                <input type="password" placeholder="ConfirmPassword" required>
-            </div>
-            <div>
-                <input type="checkbox" id="Checkbox"> Remember me
-            </div>
-            <div>
-                <Button type="submit"> Submit </Button>
-            </div>
-            <p></p>
-        </form>
     </div>
+
+
+    <div id="colorlib-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <h2>Recent Blog</h2>
+                    <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque,
+                        whose courtyard accommodates 25,000 people.</p>
+                </div>
+            </div>
+            <div class="blog-flex">
+                <div class="f-entry-img" style="background-image: url(Assets/images/blog-3.jpg);">
+                </div>
+                <div class="blog-entry aside-stretch-right">
+                    <div class="row">
+                        <div class="col-md-12 animate-box">
+                            <a href="#" class="blog-post">
+                                <span class="img" style="background-image: url(Assets/images/blog-1.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">Mar 14, 2021</span>
+                                    <h3>A Definitive Guide to the Best Stay</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 animate-box">
+                            <a href="#" class="blog-post">
+                                <span class="img" style="background-image: url(Assets/images/blog-2.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">Mar 14, 2021</span>
+                                    <h3>How to Find The Path to Their Dream Trip</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 animate-box">
+                            <a href="#" class="blog-post">
+                                <span class="img" style="background-image: url(Assets/images/blog-4.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">Mar 14, 2021</span>
+                                    <h3>Our Secret Best Hotel Stay</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="colorlib-intro" class="intro-img" style="background-image: url(Assets/images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 animate-box">
+                    <div class="intro-desc">
+                        <div class="text-salebox">
+                            <div class="text-lefts">
+                                <div class="sale-box">
+                                    <div class="sale-box-top">
+                                        <h2 class="number">20</h2>
+                                        <span class="sup-1">Most</span>
+                                        <span class="sup-2">Noted</span>
+                                    </div>
+                                    <h2 class="text-sale">Place</h2>
+                                </div>
+                            </div>
+                            <div class="text-rights">
+                                <h3 class="title">Places which will make you fell in LOVE</h3>
+                                <p>There are top 20 places which every tourist love.</p>
+                                <p><a href="#" class="btn btn-primary">Gallery</a> <a href="#" class="btn btn-primary btn-outline">Read more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="video-wrap">
+                        <div class="video colorlib-video" style="background-image: url(Assets/images/img_bg_2.jpg);">
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="colorlib-testimony" class="colorlib-light-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <h2>Our Satisfied Guests says</h2>
+                    <p>We love to tell about the review of different places from different tourist.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 animate-box">
+                    <div class="owl-carousel2">
+                        <div class="item">
+                            <div class="testimony text-center">
+                                <span class="img-user" style="background-image: url(Assets/images/person1.jpg);"></span>
+                                <span class="user">Red Fort</span>
+                                <small>Delhi</small>
+                                <blockquote>
+                                    <p>" We love to tell about the review of different places from different tourist. "</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony text-center">
+                                <span class="img-user" style="background-image: url(Assets/images/person2.jpg);"></span>
+                                <span class="user">India Gate</span>
+                                <small>Delhi</small>
+                                <blockquote>
+                                    <p>" We love to tell about the review of different places from different tourist. "</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony text-center">
+                                <span class="img-user" style="background-image: url(Assets/images/person3.jpg);"></span>
+                                <span class="user">Lotus Temple</span>
+                                <small>Delhi</small>
+                                <blockquote>
+                                    <p>" We love to tell about the review of different places from different tourist. "</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="colorlib-subscribe" style="background-image: url(Assets/images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <h2>Sign Up for a Newsletter</h2>
+                    <p>Sign up for our mailing list to get latest updates and offers.</p>
+                    <form class="form-inline qbstp-header-subscribe">
+                        <div class="row">
+                            <div class="col-md-12 col-md-offset-0">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="colorlib-footer" role="contentinfo">
+        <div class="container">
+            <div class="row row-pb-md">
+                <div class="col-md-3 colorlib-widget">
+                    <h4>About</h4>
+                    <p>A small description. A small description A small description A small descriptionA small description</p>
+                    <p>
+                        <ul class="colorlib-social-icons">
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-md-2 colorlib-widget">
+                    <h4>Know More</h4>
+                    <p>
+                        <ul class="colorlib-footer-links">
+                            <li><a href="#">Flight</a></li>
+                            <li><a href="#">Hotels</a></li>
+                            <li><a href="#">Tour</a></li>
+                            <li><a href="#">Car Rent</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-md-2 colorlib-widget">
+                    <h4>Top Places</h4>
+                    <p>
+                        <ul class="colorlib-footer-links">
+                            <li><a href="#">Chandni Chock</a></li>
+                            <li><a href="#">Sarojni Nagar</a></li>
+                            <li><a href="#">Chandni Chock</a></li>
+                            <li><a href="#">Sarojni Nagar</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>Blog Post</h4>
+                    <ul class="colorlib-footer-links">
+                        <li><a href="#">The Ultimate Trip</a></li>
+                        <li><a href="#">How These 5 People Come to the Heart of India</a></li>
+                        <li><a href="#">A Definitive Guide to the Best Dining and Drinking Venues in the City</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-md-push-1">
+                    <h4>Contact Us</h4>
+                    <ul class="colorlib-footer-links">
+                        <li>Delhi, <br> India</li>
+                        <li><a href="#">+ 0000 0000 00</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved to Delhi Tourism
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="Assets/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="Assets/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="Assets/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="Assets/js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="Assets/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="Assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="Assets/js/magnific-popup-options.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="Assets/js/jquery.stellar.min.js"></script>
+    <!-- Main -->
+    <script src="Assets/js/main.js"></script>
+
 </body>
 
 </html>
