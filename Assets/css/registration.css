@@ -3,6 +3,49 @@ body {
     min-height: 100vh;
 }
 
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 70px;
+    position: sticky;
+    top: 4px;
+    border: 3px solid snow;
+    z-index: 3;
+
+}
+
+.nav a {
+    font-size: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 15px;
+    font-family: 'Gorditas', cursive;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.nav a:hover {
+    color: turquoise;
+    font-size: 25px;
+}
+
+#nav_img{
+    position: absolute;
+    left: 20px;
+}
+
+#register{
+    position: absolute;
+    right: 20px;
+}
+
 .form-control:not(select) {
     padding: 1.5rem 0.5rem;
 }

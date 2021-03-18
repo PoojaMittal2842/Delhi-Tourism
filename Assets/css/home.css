@@ -88,8 +88,10 @@ body{
 .about_us{
     padding: 20px;
     margin: 10px;
-    border: 3px dashed black;
+    border: 5px dashed rgb(255, 255, 255);
     border-radius: 30px;
+    color: white;
+    background-color: black;
 
 }
 
@@ -103,8 +105,22 @@ body{
 
 .about_us_btn{
     cursor: pointer;
-    background-image: -moz-linear-gradient(-45deg rgb(255, 0, 234),rgb(55, 0, 255),#00ffb3);
-    size: 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: large;
+    font-family: font-family: 'Bangers', cursive;
+    
+}
+
+.about_us_btn:hover{
+    transform: scale(0.9);
+}
+
+.about_us_btn:focus{
+    outline: none;
+    background-color: greenyellow;
 }
 
 .foot {
