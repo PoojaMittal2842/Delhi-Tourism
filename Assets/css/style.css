@@ -1,0 +1,41 @@
+
+.img
+{
+  margin-left: 95%;
+  position: absolute;
+  margin-bottom: 50%;
+  top:-1%;
+  width:500px;
+  height:1445px;
+
+}
+body {
+  background-image: url('Background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-block-start: 5%;
+}
+
+.container
+{
+ background:whitesmoke;
+ width:500px;
+ height:1000px;
+ position:absolute;
+}
+.button
+{
+  width: 50%;
+  height: 50px;
+}
+input
+{
+border:1 px black;
+border-bottom:1px solid #006080;
+width:80%;
+font-size:1.5em;
+padding:7px 0;
+outline:none;
+}
+
