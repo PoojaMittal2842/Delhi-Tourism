@@ -1,0 +1,54 @@
+body, html {
+	height: 100%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+  
+  .bg-image {
+	/* The image used */
+	background-image: url("../images/cover-img-1.jpg");
+  
+	
+  
+	/* Full height */
+	height: 100%;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+#contact{
+	padding: 5%;	
+}
+.contact{
+	
+	background: linear-gradient(to top left, rgba(0, 0, 26,0.5) 12%, rgba(0, 102, 0,0.5) 94%);/* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.socialmedia{
+	height: auto;
+	background-color: cadetblue;
+}
+li{
+	display: inline;
+	font-size: xx-large;
+	font-family: 'Playball', cursive;
+}
+footer{
+	color: white;
+	background: linear-gradient(to top left, rgba(0, 0, 26,0.8) 12%, rgba(0, 77, 0,0.8) 94%);
+}
