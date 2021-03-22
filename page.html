@@ -11,86 +11,50 @@ Phone number
 Recent contributions ( the number of places he/she has added)
 Update Button-->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
 
     <title>User Profile Page</title>
-     <meta name="author" content="SitePoint" />
+    <meta name="author" content="SitePoint" />
 
-    <link rel="stylesheet" media="screen" href="Assets/css/style.css" />
+    <link rel="stylesheet" media="screen" href="Assets/css/pagestyle.css" />
 
-  </head>
+</head>
 
-  <body>
-
-    <div class="container">
-    <div class="row m-y-2">
-        <div class="col-lg-8 push-lg-4">
-           <img src="Assets/images/Roadway.jpg" class="img" >
-            <div class="tab-content p-b-3">
-                <div class="tab-pane active" id="profile">
-                    <h4 class="m-y-2"  style="font-size: 26px;">User Profile</h4><hr>
-
-                    <div class="col-md-12">
-
-                <div class="tab-pane" id="edit">
-
-                    <form role="form">
-                    <div class="col-lg-4 pull-lg-8 text-xs-center">
-          <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-<p><img id="output" width="250" height="250" /></p>
-
-        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"  style="font-size: 20px;"><h2>Name</h2></label>
-                            <div class="col-lg-9">
-                           <input class="form-control" type="text" value="">
-                            </div>
-                        </div>
-
-                         <div class="form-group row">
-                          <label class="col-lg-3 col-form-label form-control-label"  style="font-size: 20px;"><h2>Age</h2></label>
-                            <div class="col-lg-9">
-                           <input class="form-control" type="Number" value="">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                        <label class="col-lg-3 col-form-label form-control-label" style="font-size: 20px;"><h2>Email</h2></label>
-                            <div class="col-lg-9">
-<input class="form-control" type="email" value="" id="email" size="30" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"  style="font-size: 20px;"><h2>Phone Number</h2></label>
-                            <div class="col-lg-9">
-                                <input class="form-control"  input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"  style="font-size: 20px;"><h2>Recent Contributions</h2></label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="number" value="" ><br><br>
-                            </div>
-                        </div>
-<hr>
-                        <div class="form-group row">
-                           <label class="col-lg-3 col-form-label form-control-label"></label>
-                            <div class="col-lg-10">
-                           <button onclick="UpdateData()" class="button">Update</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
+<body>
+    <div class="regform">
+        <h1>User Profile Page</h1>
     </div>
-</div>
+    <div class="main">
+        <form>
+            <div id="name">
+                <h2 class="name">Full Name</h2>
+                <input class="firstname" type="text" name="first_name"><br>
+            </div>
+            <h2 class="name">Location</h2>
+            <input class="company" type="text" name="company">
 
-    <script src="Assets/js/script.js"></script>
+            <h2 class="name">Email</h2>
+            <input class="email" type="text" name="email">
 
+            <h2 class="name">Phone</h2>
+            <input class="code" type="text" name="area_code">
+            <label class="area_code">Area Code</label>
+            <input class="number" type="text" name="phone">
+            <label class="phone_number">Phone Number</label>
 
-  </body>
+            <h2 class="name">Contribution</h2>
+            <select name="subject" class="option">
+                <option disabled="disabled" selected="selected">--Choose Option You want to Submit</option>
+                <option> Photos</option>
+                <option> Blogs</option>
+                <option> Experience</option>
+                <option> Suggestions</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
 </html>
