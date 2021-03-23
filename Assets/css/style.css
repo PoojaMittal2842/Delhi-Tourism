@@ -139,6 +139,8 @@ figure {
 .colorlib-nav ul {
     padding: 0;
     margin: 8px 0 0 0;
+    margin-right: -200px;
+    margin-top: -40px;
 }
 
 .colorlib-nav ul li {
@@ -176,7 +178,7 @@ figure {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 40px;
+    top: 70px;
     left: 0;
     text-align: left;
     background: #000;
