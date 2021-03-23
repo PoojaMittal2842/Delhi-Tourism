@@ -47,7 +47,7 @@
     left: 0;
     line-height: 25px;
     text-align: center;
-    -webkit-transition: top 0.5s;
+    --webkit-transition: top 0.5s;
     transform: scale(0);
 }
 .images-content .imgdetails h1 {
