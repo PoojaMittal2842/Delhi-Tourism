@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://www.jqueryscript.net/demo/country-picker-flags/build/css/countrySelect.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Assets/css/registration.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/images/delhi-tourism.png">
+    <link rel="stylesheet" href="../Assets/css/registration.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/images/delhi-tourism.png">
 
 </head>
+
 <body>
     <nav class="nav">
-        <a href="./home.html" id="nav_img"><img src="./Assets/images/delhi-tourism.png" alt="" height="80px" width="110px"></a>
-        <a href="./home.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
-        <a href="/about.html" target="_blank"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;About us</a>
-        <a href="./Book_pass.html" target="_blank"><i class="fas fa-hotel"></i>&nbsp;Book Pass</a>
-        <a href="#" target="_blank"><i class="fas fa-place-of-worship"></i></i>&nbsp;Places To Visit</a>
-        <a href="#" target="_blank"><i class="fa fa-plug" aria-hidden="true"></i>&nbsp;Contact us</a>
-        <a href="./registration.html" target="_blank" id="register">Sign in&nbsp;<i class="fas fa-sign-in-alt" ></i></a>
+        <a href="../index.html" id="nav_img"><img src="../Assets/images/delhi-tourism.png" alt="" height="80px" width="110px"></a>
+        <a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+        <a href="./contactus.html" target="_blank"><i class="fa fa-plug" aria-hidden="true"></i>&nbsp;Contact us</a>
     </nav>
     <div class="container">
         <div class="row py-5 mt-4">
             <!-- Intro -->
             <div class="col-md-6 pr-lg-5 mb-5 mb-md-0 align-items-center">
                 <h1>Welcome to Delhi Tourism</h1>
-                <img src="Assets/images/delhi-tourism.png" alt="" class="img-fluid mb-3">
+                <img src="../Assets/images/delhi-tourism.png" alt="" class="img-fluid mb-3">
                 <h2>Create an Account</h2>
                 <p class="font-italic text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-    
+
             <!-- Registeration Form -->
             <div class="col-md-6 col-lg-6 ml-auto">
                 <form action="#">
                     <div class="row">
-    
+
                         <!-- First Name -->
                         <div class="input-group col-lg-6 mb-4">
                             <div class="input-group-prepend">
@@ -48,7 +50,7 @@
                             </div>
                             <input id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white" required>
                         </div>
-    
+
                         <!-- Last Name -->
                         <div class="input-group col-lg-6 mb-4">
                             <div class="input-group-prepend">
@@ -58,7 +60,7 @@
                             </div>
                             <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white" required>
                         </div>
-    
+
                         <!-- Email Address -->
                         <div class="input-group col-lg-12 mb-4">
                             <div class="input-group-prepend">
@@ -68,7 +70,7 @@
                             </div>
                             <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white" required>
                         </div>
-    
+
                         <!-- Country -->
                         <div class="input-group col-lg-12 mb-4">
                             <div class="input-group-prepend">
@@ -76,7 +78,7 @@
                                     <i class="fa fa-globe text-muted"></i>
                                 </span>
                             </div>
-                                <input id="country_selector" type="text" class="form-control bg-white " required>
+                            <input id="country_selector" type="text" class="form-control bg-white " required>
                         </div>
 
                         <!-- Phone Number -->
@@ -88,7 +90,7 @@
                             </div>
                             <input id="phone" type="tel" name="phone" class="form-control bg-white" required>
                         </div>
-    
+
                         <!-- Password -->
                         <div class="input-group col-lg-6 mb-4">
                             <div class="input-group-prepend">
@@ -98,7 +100,7 @@
                             </div>
                             <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white" required>
                         </div>
-    
+
                         <!-- Password Confirmation -->
                         <div class="input-group col-lg-6 mb-4">
                             <div class="input-group-prepend">
@@ -109,40 +111,40 @@
                             </div>
                             <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white" required>
                         </div>
-                        
+
                         <div class="form-group col-lg-12">
                             <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                         </div>
-    
+
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-0">
                             <a href="#" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Create your account</span>
                             </a>
                         </div>
-    
+
                         <!-- Divider Text -->
                         <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                             <div class="border-bottom w-100 ml-5"></div>
                             <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
                             <div class="border-bottom w-100 mr-5"></div>
                         </div>
-    
+
                         <!-- Social Login -->
                         <div class="social-media">
-                            <h5>Sign up with social media</h5>
+                            <h5>Register with social media</h5>
                             <div class="social-icons">
                                 <a href="#"><i class="fa fa-google" title="Google"></i></a>
                                 <a href="#"><i class="fa fa-facebook" title="Facebook"></i></a>
                                 <a href="#"><i class=" fa fa-twitter" title="Twitter"></i></a>
                             </div>
                         </div>
-    
+
                         <!-- Already Registered -->
                         <div class="text-center w-100">
-                            <p class="text-muted font-weight-bold">Already Registered? <a href="#" class="text-primary ml-2">Login</a></p>
+                            <p class="text-muted font-weight-bold">Already Registered? <a href="./login.html" class="text-primary ml-2">Login</a></p>
                         </div>
-    
+
                     </div>
                 </form>
             </div>
@@ -153,6 +155,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://www.jqueryscript.net/demo/country-picker-flags/build/js/countrySelect.js"></script>
-    <script src="Assets/js/registration.js"></script>
+    <script src="../Assets/js/registration.js"></script>
 </body>
+
 </html>
