@@ -14,6 +14,11 @@ body {
     color: #595959;
     background: #fff;
 }
+.right{
+    margin-left: 70%;
+    margin-top: 1.5%;
+
+}
 
 #page {
     position: relative;

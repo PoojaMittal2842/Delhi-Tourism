@@ -64,7 +64,7 @@ body {
     justify-content: center;
     color: white;
     padding: 15px;
-    font-family: 'Gorditas', cursive;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
     cursor: pointer;
 }
@@ -95,6 +95,7 @@ body {
     font-family: var(--title);
     font-weight: bold;
     font-size: 4rem;
+    text-shadow:2px 2px blanchedalmond;
     color: #1b262c;
 }
 
@@ -111,7 +112,7 @@ body {
 }
 
 .main_header .top_head {
-    background: #fcc203;
+    background: #f5be09f8;
 }
 
 .main_header__div h2 {
