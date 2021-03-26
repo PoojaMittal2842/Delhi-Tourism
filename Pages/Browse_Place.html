@@ -14,14 +14,6 @@
 
     <div class="spinner-container">
         <div class="circles">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
 
@@ -30,33 +22,24 @@
 
         <section class="team">
             <div class="section-header">
-                <h1 class="section-heading">Browse Places Page</h1>
+                <h1 class="section-heading">Browse Places</h1>
                 <div class="underline"></div>
             </div>
 
-
-
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
-
-
-            <ul id="myUL">
-                <li><a href="#">India Gate</a></li>
-                <li><a href="#">Jama Masjid</a></li>
-
-                <li><a href="#">Jantar Mantar</a></li>
-                <li><a href="#">Lotus Temple</a></li>
-
-                <li><a href="#">Qutab Minar</a></li>
-                <li><a href="#">Red Fort</a></li>
-
-            </ul>
-
-
-
-
-
-
+            
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Search Places</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="#">India Gate</a>
+      <a href="#">Lotus Temple</a>
+      <a href="#">Qutab Minar</a>
+      <a href="#">Red Fort</a>
+      <a href="#">Jama Masjid</a>
+      <a href="#">Jantar Mantar</a>
+    </div>
+  </div>
+  
 
             <div class="cards-wrapper">
                 <div class="card">
