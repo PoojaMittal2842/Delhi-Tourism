@@ -139,8 +139,8 @@ figure {
 .colorlib-nav ul {
     padding: 0;
     margin: 8px 0 0 0;
-    margin-right: -200px;
-    margin-top: -30px;
+    margin-right: 20px;
+    margin-top: 5px;
 }
 
 .colorlib-nav ul li {
