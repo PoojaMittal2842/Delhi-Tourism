@@ -38,6 +38,19 @@ function loadTheme() {
     body.classList.add(theme === "" ? themeLight : theme)
 }
 
+function switchTheme() {
+    if (body.classList.contains(themeLight)) {
+        body.classList.remove(themeLight)
+        body.classList.add(themeDark)
+        setCookie(themeCookieName, themeDark)
+    } else {
+        body.classList.remove(themeDark)
+        body.classList.add(themeLight)
+        setCookie(themeCookieName, themeLight)
+    }
+}
+
+
 function collapseSidebar() {
     body.classList.toggle('sidebar-expand')
 }
