@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans&display=swap');
 :root {
+    --primary-color:#ffdd00;
+    --primary-background:#fff;
+    --primary-background-inverse:#010409;
+    --primary-shadow:rgba(0,0,0,0.14);
+    --primary-input-border: #e1e4e8;
+    --primary-input-background: #fff;
     --bg-size: 100% 100%;
-    --main-color: #fff;
     --title: 'Josefin Sans', sans-serif;
     --font-para: 'David Libre', serif;
     --btn-color: #bbe1fa;
@@ -9,6 +14,22 @@
     --btn-font: 1.5rem;
     --eff: .3s all ease;
 }
+[data-theme="dark"] {
+    --primary-color:#f05454;
+    --primary-background:#010409;
+    --primary-background-inverse:#fff;
+    --primary-shadow:rgba(255,255,255,0.14);
+    --primary-input-border: #21262d;
+    --primary-input-background: #0d1117;
+    --bg-size: 100% 100%;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color: #bbe1fa;
+    --btn-font-color: #000;
+    --btn-font: 1.5rem;
+    --eff: .3s all ease;
+}
+
 
 * {
     font-family: var(--font-para);
@@ -37,8 +58,46 @@ a:hover {
     cursor: pointer;
 }
 
+.togglebtn {
+    position: absolute;
+    margin: 0;
+    width: 36px;
+    height: 22px;
+    opacity: 0;
+}
+    .togglebtn + label {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid #fff;
+        height: 18px;
+        width: 36px;
+        background-color: #ffdd00;
+        border-radius: 14px;
+    }
+    .togglebtn + label > b {
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+        transition: margin-left .1s;
+        background-color: #fbfbfb;
+        width: 16px;
+        border-radius: 50%;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+        margin-left: 0;
+        left: 0;
+    }
+.togglebtn:checked + label {
+    background-color: #f05454;
+    border:1px solid #000;
+}
+.togglebtn:checked + label > b {
+    margin-left: 18px;
+}
+
 body {
-    background: hsl(84, 3%, 94%);
+    background: var(--primary-background);
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
@@ -95,8 +154,8 @@ body {
     font-family: var(--title);
     font-weight: bold;
     font-size: 4rem;
-    text-shadow:2px 2px blanchedalmond;
-    color: #1b262c;
+    text-shadow:2px 2px var(--primary-background);
+    color: var(--primary-background-inverse);
 }
 
 .main_heading__para {
@@ -112,14 +171,14 @@ body {
 }
 
 .main_header .top_head {
-    background: #f5be09f8;
+    background: var(--primary-color);
 }
 
 .main_header__div h2 {
     font-size: 6.5rem;
     font-weight: bold;
     font-family: var(--title);
-    color: var(--main-color);
+    color: var(--primary-background);
     padding-bottom: none;
     position: relative;
     transition: var(--eff);
@@ -150,6 +209,7 @@ body {
 .flip4 {
     -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
     animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    color:var(--primary-background-inverse);
 }
 
 @-webkit-keyframes flip4 {
@@ -219,12 +279,12 @@ body {
 }
 
 .main_header__div button {
-    color: var(--btn-font-color);
+    color: var(--primary-background-inverse);
     border-width: 0;
     font-size: var(--btn-font);
     transition: var(--eff);
     padding: .8rem 2rem;
-    background-color: #fec107;
+    background-color: var(--primary-color);
     border-color: var(--btn-color);
     font-family: var(--title);
     outline: none;
@@ -245,7 +305,7 @@ body {
 }
 
 body {
-    background: whitesmoke;
+    background: var(--primary-background);
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
@@ -253,9 +313,9 @@ body {
 .wrapper {
     max-width: 500px;
     width: 100%;
-    background: #fff;
+    background: var(--primary-background);
     margin: 20px auto;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+    box-shadow: 0px 11px 35px 2px var(--primary-shadow);
     padding: 30px;
 }
 
@@ -270,7 +330,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #fec107;
+    color: var(--primary-color);
     text-transform: uppercase;
     text-align: center;
 }
@@ -296,7 +356,8 @@ body {
 .wrapper .form .inputfield .textarea {
     width: 100%;
     outline: none;
-    border: 1px solid #d5dbd9;
+    background: var(--primary-input-background);
+    border: 1px solid var(--primary-input-border);
     font-size: 15px;
     padding: 8px 10px;
     border-radius: 3px;
@@ -321,7 +382,7 @@ body {
     top: 12px;
     right: 10px;
     border: 8px solid;
-    border-color: #d5dbd9 transparent transparent transparent;
+    border-color: var(--primary-input-border) transparent transparent transparent;
     pointer-events: none;
 }
 
@@ -335,14 +396,15 @@ body {
     border: 0px;
     padding: 8px 10px;
     font-size: 15px;
-    border: 1px solid #d5dbd9;
+    background: var(--primary-input-background);
+    border: 1px solid var(--primary-input-border);
     border-radius: 3px;
 }
 
 .wrapper .form .inputfield .input:focus,
 .wrapper .form .inputfield .textarea:focus,
 .wrapper .form .inputfield .custom_select select:focus {
-    border: 1px solid #fec107;
+    border: 1px solid var(--primary-color);
 }
 
 .wrapper .form .inputfield p {
@@ -361,7 +423,7 @@ body {
 .wrapper .form .inputfield .check .checkmark {
     width: 15px;
     height: 15px;
-    border: 1px solid #fec107;
+    border: 1px solid var(--primary-color);
     display: block;
     position: relative;
 }
@@ -380,7 +442,7 @@ body {
 }
 
 .wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark {
-    background: #fec107;
+    background: var(--primary-color);
 }
 
 .wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark:before {
@@ -392,15 +454,15 @@ body {
     padding: 8px 10px;
     font-size: 15px;
     border: 0px;
-    background: #fec107;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--primary-background-inverse);
     cursor: pointer;
     border-radius: 3px;
     outline: none;
 }
 
 .wrapper .form .inputfield .btn:hover {
-    background: #ffd658;
+    background: var(--primary-color);
 }
 
 .wrapper .form .inputfield:last-child {
