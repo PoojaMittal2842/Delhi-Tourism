@@ -1,5 +1,35 @@
+:root{
+    --primary-color:#ffdd00;
+    --primary-background:#fff;
+    --primary-background-inverse:#010409;
+    --primary-cards-icon:#00bbf0;
+    --primary-cards-background:#00bbf0;
+    --primary-input-border: #e1e4e8;
+    --primary-input-background: #fff;
+    --primary-footer:#2c2e3e;
+}
+[data-theme="dark"]{
+    --primary-color:#f05454;
+    --primary-background:#010409;
+    --primary-background-inverse:#fff;
+    --primary-cards-icon:#2d6187;
+    --primary-cards-background:#28abb9;
+    --primary-input-border: #21262d;
+    --primary-input-background: #0d1117;
+    --primary-footer:#1a2228;
+}
+
 body {
     min-height: 100vh;
+    background-color: var(--primary-background);
+}
+
+#light-dark{
+    color:var(--primary-background-inverse);
+}
+
+h1,h2{
+    color:var(--primary-background-inverse);
 }
 
 .nav {
@@ -13,6 +43,18 @@ body {
     top: 4px;
     border: 3px solid snow;
     z-index: 3;
+}
+
+.bg-white{
+    background-color: var(--primary-input-background)!important;
+}
+
+.form-control{
+    border:1px solid var(--primary-input-border);
+}
+
+.input-group-text{
+    border:1px solid var(--primary-input-border);
 }
 
 .nav a {
@@ -36,6 +78,44 @@ body {
 #nav_img {
     position: absolute;
     left: 20px;
+}
+
+.togglebtn {
+    position: absolute;
+    margin: 0;
+    width: 36px;
+    height: 22px;
+    opacity: 0;
+}
+    .togglebtn + label {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid #fff;
+        height: 18px;
+        width: 36px;
+        background-color: #ffdd00;
+        border-radius: 14px;
+    }
+    .togglebtn + label > b {
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+        transition: margin-left .1s;
+        background-color: #fbfbfb;
+        width: 16px;
+        border-radius: 50%;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+        margin-left: 0;
+        left: 0;
+    }
+.togglebtn:checked + label {
+    background-color: #f05454;
+    border:1px solid #000;
+}
+.togglebtn:checked + label > b {
+    margin-left: 18px;
 }
 
 #register {
@@ -72,7 +152,6 @@ span .fa-check {
 
 .social-media {
     max-width: 600px;
-    background-color: #fff;
     margin: auto;
     text-align: center;
     color: #9fadca;
@@ -93,7 +172,6 @@ span .fa-check {
     display: inline-block;
     height: 45px;
     text-align: center;
-    background-color: #fff;
     line-height: 45px;
 }
 
