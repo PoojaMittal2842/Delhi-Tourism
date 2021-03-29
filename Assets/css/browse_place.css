@@ -1,3 +1,26 @@
+:root{
+  --primary-color:#ffdd00;
+  --primary-background:#fff;
+  --primary-background-inverse:#010409;
+  --primary-cards-icon:#00bbf0;
+  --primary-cards-background:#00bbf0;
+  --primary-input-border: #e1e4e8;
+  --primary-input-background: #fff;
+  --primary-footer:#2c2e3e;
+  --primary-shadow:rgba(0,0,0,0.14);
+}
+[data-theme="dark"]{
+  --primary-color:#f05454;
+  --primary-background:#010409;
+  --primary-background-inverse:#fff;
+  --primary-cards-icon:#2d6187;
+  --primary-cards-background:#28abb9;
+  --primary-input-border: #21262d;
+  --primary-input-background: #0d1117;
+  --primary-footer:#1a2228;
+  --primary-shadow:rgba(255,255,255,0.14);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +35,49 @@
     font-size: 62.5%;
     }
     
-    
+    #light-dark{
+      font-size:15px;
+      color:var(--primary-background-inverse);
+    }
+
+    .togglebtn {
+      position: absolute;
+      margin: 0;
+      width: 36px;
+      height: 22px;
+      opacity: 0;
+  }
+      .togglebtn + label {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          border: 1px solid #fff;
+          height: 18px;
+          width: 36px;
+          background-color: #ffdd00;
+          border-radius: 14px;
+      }
+      .togglebtn + label > b {
+          position: absolute;
+          display: inline-block;
+          height: 100%;
+          vertical-align: top;
+          transition: margin-left .1s;
+          background-color: #fbfbfb;
+          width: 16px;
+          border-radius: 50%;
+          box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+          margin-left: 0;
+          left: 0;
+      }
+  .togglebtn:checked + label {
+      background-color: #f05454;
+      border:1px solid #000;
+  }
+  .togglebtn:checked + label > b {
+      margin-left: 18px;
+  }
+
     .spinner-container {
         position: absolute;
         top: 0;
@@ -27,6 +92,9 @@
         z-index: 300;
       }
       
+      body{
+        background-color: var(--primary-background);
+      }
       
     .display .spinner-container {
         opacity: 0;
@@ -42,8 +110,8 @@
         animation: displayCircles 1.5s;
       }
       .dropbtn {
-        background-color: #e7d31a;
-        color: rgb(8, 4, 4);
+        background-color: var(--primary-color);
+        color:var(--primary-background-inverse);
         padding: 16px;
         font-size: 16px;
         border: none;
@@ -51,7 +119,7 @@
       }
       
       .dropbtn:hover, .dropbtn:focus {
-        background-color: #eeea0d;
+        background-color: var(--primary-color);
       }
       
       #myInput {
@@ -60,10 +128,11 @@
         background-repeat: no-repeat;
         padding: 14px 20px 12px 45px;
         border: none;
-        border-bottom: 1px solid #ddd;
+        background-color: var(--primary-input-background);
+        border-bottom: 1px solid var(--primary-input-border);
       }
       
-      #myInput:focus {outline: 3px solid #ddd;}
+      #myInput:focus {outline: 3px solid var(--primary-input-border);}
       
       .dropdown {
         position: relative;
@@ -73,22 +142,22 @@
       .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f6f6f6;
+        background-color: var(--primary-input-background);
         min-width: 230px;
         overflow: auto;
-        border: 1px solid #ddd;
+        border: 1px solid var(--primary-input-border);
         z-index: 1;
       }
       
       .dropdown-content a {
         font-size: 1.5em;
-        color: black;
+        color: var(--primary-background-inverse);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
       }
       
-      .dropdown a:hover {background-color: #ddd;}
+      .dropdown a:hover {background-color: grey;}
       
       .show {display: block;}    
      
@@ -249,7 +318,7 @@
         font-family: "Mulish", serif;
         font-size: 5rem;
         font-weight: 300;
-        color: #4b4b4b;
+        color:var(--primary-background-inverse);
         margin-bottom: 6rem;
       }
     
@@ -257,7 +326,7 @@
     .underline {
         width: 45rem;
         height: 0.3rem;
-        background-color: rgb(220, 243, 14);
+        background-color: var(--primary-color);
       }
     
     
@@ -371,7 +440,7 @@
       .card {
         width: 37rem;
         height: 45rem;
-        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 11px 35px 2px var(--primary-shadow);
         border-radius: 0.5rem;
         position: relative;
       }
@@ -379,7 +448,7 @@
       .card-img-wrapper {
         width: 100%;
         height: 100%;
-        background-color: #262626;
+        background-color: var(--primary-background-inverse);
         border-radius: 0.5rem;
       }
      
@@ -402,7 +471,7 @@
         position: absolute;
         bottom: 0;
         padding: 2rem;
-        text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+        text-shadow: 0 0.2rem 0.5rem var(--primary-shadow);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
@@ -421,7 +490,7 @@
         font-size: 2.5rem;
         line-height: 2.5rem;
         font-weight: 300;
-        color:  rgb(253, 253, 253);
+        color:  var(--primary-background);
         text-shadow: 0 0.3rem 0.5rem rgb(78, 15, 3);
       }
       
@@ -441,8 +510,8 @@
         font-size: 1.4rem;
         line-height: 1.6rem;
         font-weight: 300;
-        color:  rgb(244, 248, 1);
-        text-shadow: 1px 1px rgb(8, 7, 7);
+        color:  var(--primary-color);
+        text-shadow: 0 0.3rem 0.5rem rgb(78, 15, 3);
         width: 80%;
         margin-bottom: 2rem;
       }
@@ -467,7 +536,7 @@
     .footer {
         width: 100%;
         height: 15rem;
-        background-color: #17181b;
+        background-color: var(--primary-footer);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -492,7 +561,7 @@
       
       .social-list i {
         font-size: 2rem;
-        color: #a7a7a7;
+        color: var(--primary-color);
       }
       
       
@@ -502,7 +571,7 @@
         bottom: 5rem;
         width: 4.5rem;
         height: 4.5rem;
-        background-color: #e2b646;
+        background-color: var(--primary-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -745,7 +814,7 @@
 
     .rating-wrapper label{
         display: inline-block;
-        
+        color:var(--primary-background-inverse);
         width: 30px;
         position: relative;
         cursor: pointer;
@@ -771,7 +840,7 @@
         display: inline-block;
         top: 0;
         left: 0;
-        color: rgb(255, 208, 0);
+        color: var(--primary-color);
         opacity: 0;
 
     }
