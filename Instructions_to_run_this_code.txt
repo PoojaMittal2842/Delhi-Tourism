@@ -1,1 +1,3 @@
-
+When you are in the parent directory,
+Then type in terminal,
+'npm install' and then press Enter.
