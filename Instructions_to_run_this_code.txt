@@ -1,3 +1,10 @@
 When you are in the parent directory,
 Then type in terminal,
 'npm install' and then press Enter.
+
+And then when you see a 'node_modules' folder in the directory,
+Then type 'nodemon app.js' in terminal when you are in parent directory.
+
+Then go to your web browser,
+And go to site,
+http://localhost:3000/
