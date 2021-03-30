@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="User_Assets/css/registration.css">
+
+</head>
+
+<body>
+    <div style="float:right;margin:30px 30px">
+        <a id="light-dark"><span id="light-dark-text">Light</span><i id="light-dark-icon" style="margin-left:6px" class="fa fa-sun-o" aria-hidden="true"></i></a>
+        <input type="checkbox" name="check2" id="check2" class="togglebtn"/><label style="margin-bottom: 0px;" for="check2"><b></b></label> 
+    </div>
+    <div class="container">
+        <div class="row py-5 mt-4">
+            <!-- Intro -->
+            <div class="col-md-6 pr-lg-5 mb-5 mb-md-0 align-items-center">
+                <h1>Welcome to Delhi Tourism</h1>
+                <img src="User_Assets/images/login.jpg" alt="" class="img-fluid mb-3">
+                <h2>Login</h2>
+                <p class="font-italic text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="d-flex align-items-center col-md-6 col-lg-6 ">
+                <form action="#">
+                    <div class="row box">
+
+                        <!-- Email Address -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white" required>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0">
+                            <a href="#" class="btn btn-primary btn-block py-2">
+                                <span class="font-weight-bold">Login</span>
+                            </a>
+                        </div>
+
+                        <!-- Divider Text -->
+                        <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                            <div class="border-bottom w-100 ml-5"></div>
+                            <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                            <div class="border-bottom w-100 mr-5"></div>
+                        </div>
+
+                        <!-- Social Login -->
+                        <div class="social-media">
+                            <h5>Login with social media</h5>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa fa-google" title="Google"></i></a>
+                                <a href="#"><i class="fa fa-facebook" title="Facebook"></i></a>
+                                <a href="#"><i class=" fa fa-twitter" title="Twitter"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- not registred -->
+                        <div class="text-center w-100">
+                            <p class="text-muted font-weight-bold">Dont't have an Account? <a href="/registration" class="text-primary ml-2">Register</a></p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+        const toggleSwitch=document.querySelector('.togglebtn');
+        const text=$('#light-dark-text');
+        const icon=$('#light-dark-icon');
+        function darkMode(){
+            text.text("Dark");
+            icon.attr('class','fa fa-moon-o');
+        }
+        function lightMode() {
+            text.text("Light");
+            icon.attr('class','fa fa-sun-o');
+        }
+        function switchTheme(event) {
+        if (event.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+            darkMode();
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+            lightMode();
+        }
+        }
+        toggleSwitch.addEventListener("change", switchTheme);
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme) {
+        document.documentElement.setAttribute("data-theme", currentTheme);
+
+        if (currentTheme === "dark") {
+            toggleSwitch.checked = true;
+            darkMode();
+        }
+        }
+
+    </script>
+</body>
+
+</html>

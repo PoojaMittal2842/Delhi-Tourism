@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--This Page should be having a good UI with usage of frameworks like Bootstrap. This page is the profile page for users
+
+Details about page:
+
+Profile Picture
+Name
+Age
+Email
+Phone number
+Recent contributions ( the number of places he/she has added)
+Update Button-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>User Profile Page</title>
+    <meta name="author" content="SitePoint" />
+
+    <link rel="stylesheet" media="screen" href="User_Assets/css/profile.css" />
+
+</head>
+
+<body>
+    <div class="regform">
+        <h1>User Profile Page</h1>
+    </div>
+    <img src="User_Assets/images/person1.jpg" alt="Profile Picture">
+    <div class="main">
+        <form>
+            <div id="name">
+                <h2 class="name">Full Name</h2>
+                <input class="firstname" type="text" name="first_name"><br>
+            </div>
+            <h2 class="name">Location</h2>
+            <input class="company" type="text" name="company">
+
+            <h2 class="name">Email</h2>
+            <input class="email" type="text" name="email">
+
+            <h2 class="name">Phone</h2>
+            <input class="code" type="text" name="area_code">
+            <label class="area_code">Area Code</label>
+            <input class="number" type="text" name="phone">
+            <label class="phone_number">Phone Number</label>
+
+            <h2 class="name">Contribution</h2>
+            <select name="subject" class="option">
+                <option disabled="disabled" selected="selected">--Choose Option You want to Submit</option>
+                <option> Photos</option>
+                <option> Blogs</option>
+                <option> Experience</option>
+                <option> Suggestions</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
