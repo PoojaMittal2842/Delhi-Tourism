@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gorditas', cursive;
+    min-height: 100vh;
+    background-image:  linear-gradient(to right, #a8a8a8, #9fa3a6, #939fa1, #8c9b95, #8e9485);
+}
+.page404{
+    width:100%;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #343434;
+}
+.page404 h1{
+    font-size:150px ;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url('../images/page404.jpg') center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.page404 a{
+    text-decoration: none;
+   border: 2px solid white;
+   color: white;
+   border-radius: 30px;
+   padding: 12px 24px;
+   font-size: 14px;
+   text-transform: uppercase;
+   background:#FFDD00 ;
+}
+.page404 p{
+    padding-bottom: 20px;
+}
