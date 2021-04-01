@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 231, 179, 0.4);
+}
+
+body h1 {
+    margin: 1rem;
+    text-align: center;
+    padding: 3rem;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 a {
+    text-decoration: none;
+    padding: 0.5rem;
+    border-bottom: 3px solid black;
+}
+
+.container {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    cursor: pointer;
+    transition: all 0.5 linear;
+}
+
+.place-category {
+    width: 100%;
+    height: 75vh;
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -webkit-box-shadow: 3px 2px 5px 6px #ccc;
+    -moz-box-shadow: 3px 2px 5px 6px #ccc;
+    box-shadow: 3px 2px 5px 6px #ccc;
+}
+
+.container .place-category:first-child {
+    grid-column: span 2;
+}
+
+.container .top-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .img2 img {
+    width: 90%;
+    height: 90%;
+    margin-top: 1rem;
+    transition: all 0.2s linear;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 231, 179, 0.5);
+    transition: all 0.5s linear;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.card-1 {
+    left: -150%;
+}
+
+.top-img:hover>.card-1 {
+    left: 0;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img2:hover>img {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.img2:hover>.card {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.top-img h2 {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 40px;
+    border-bottom: 3px solid red;
+}
+
+.card-img h2 {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 30px;
+    border-bottom: 3px solid red;
+}
+
+.card p {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 24px;
+}
+
+.card a {
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.card a:hover {
+    color: red;
+    opacity: 0.5;
+}
+
+.card span {
+    color: white;
+    font-weight: bold;
+}
