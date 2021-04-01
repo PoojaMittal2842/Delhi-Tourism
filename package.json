@@ -1,0 +1,39 @@
+{
+  "name": "delhi-tourism",
+  "version": "1.0.0",
+  "description": "It's a tourism website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PoojaMittal2842/Delhi-Tourism.git"
+  },
+  "author": "Kush",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "joi": "^17.2.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "sanitize-html": "^1.27.4",
+    "connect-mongo": "^3.2.0",
+    "express-mongo-sanitize": "^2.0.0",
+    "mongoose": "^5.10.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "request": "^2.88.2",
+    "require": "^2.4.20"
+  },
+  "bugs": {
+    "url": "https://github.com/PoojaMittal2842/Delhi-Tourism/issues"
+  },
+  "homepage": "https://github.com/PoojaMittal2842/Delhi-Tourism#readme"
+}
