@@ -1,5 +1,5 @@
-To add the node_modules in  this code,
-First run 'npm install' in  the terminal when you are in parent directory.
+First add the node_modules in  this code,
+Run 'npm install' in  the terminal when you are in parent directory.
 
-And then to run the code
+And then to run the code,
 Run 'node app.js' in the terminal when you are in the parent directory.
