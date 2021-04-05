@@ -59,7 +59,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-2">
-                            <div id="colorlib-logo"><a href="/"><img src="User_Assets/images/logo.jpg" style="border-radius:10%;width:95px;height:80px"></a></div>
+                            <div id="colorlib-logo">
+                                <a href="/"><img src="User_Assets/images/logo.jpg" style="border-radius:10%;width:95px;height:80px"></a>
+                            </div>
                         </div>
                         <div class="col-xs-10 text-right">
                             <ul>
@@ -152,6 +154,155 @@
                 </ul>
             </div>
         </aside>
+        <div id="colorlib-reservation">
+            <!-- <div class="container"> -->
+            <div class="row">
+                <div class="search-wrap">
+                    <div class="container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#flight"><i class="flaticon-plane"></i> Flight</a></li>
+                            <li><a data-toggle="tab" href="#hotel"><i class="flaticon-resort"></i> Hotel</a></li>
+                            <li><a data-toggle="tab" href="#car"><i class="flaticon-car"></i> Car Rent</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="flight" class="tab-pane fade in active">
+                            <form method="post" class="colorlib-form">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Where:</label>
+                                            <div class="form-field">
+                                                <input type="text" id="location" class="form-control" placeholder="Search Location">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="date">Check-in:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-in date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="date">Check-out:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-out date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="guests">Guest</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-arrow-down3"></i>
+                                                <select name="people" id="people" class="form-control">
+				                        <option value="#">1</option>
+				                        <option value="#">2</option>
+				                        <option value="#">3</option>
+				                        <option value="#">4</option>
+				                        <option value="#">5+</option>
+				                      </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="submit" name="submit" id="submit" value="Find Flights" class="btn btn-primary btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="hotel" class="tab-pane fade">
+                            <form method="post" class="colorlib-form">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="booknow">
+                                            <h2>Book Now</h2>
+                                            <span>Best Price Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Check-in:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-in date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Check-out:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-out date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="guests">Guest</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-arrow-down3"></i>
+                                                <select name="people" id="people" class="form-control">
+				                                    <option value="#">1</option>
+				                                    <option value="#">2</option>
+				                                    <option value="#">3</option>
+				                                    <option value="#">4</option>
+				                                    <option value="#">5+</option>
+				                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="car" class="tab-pane fade">
+                            <form method="post" class="colorlib-form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="date">Where:</label>
+                                            <div class="form-field">
+                                                <input type="text" id="location" class="form-control" placeholder="Search Location">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Start Date:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-in date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Return Date:</label>
+                                            <div class="form-field">
+                                                <i class="icon icon-calendar2"></i>
+                                                <input type="text" id="date" class="form-control date" placeholder="Check-out date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="submit" name="submit" id="submit" value="Find Car" class="btn btn-primary btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="colorlib-services">
@@ -458,8 +609,7 @@
             <div class="row row-pb-md">
                 <div class="col-md-3 colorlib-widget">
                     <h4>About</h4>
-                    <p>This website includes all the famous places to visit by tourists from all over the world. Going through this website will make you explore all the famous places of Delhi i.e.
-                        From historical monuments to best restaurant and etc.</p>
+                    <p>This website includes all the famous places to visit by tourists from all over the world. Going through this website will make you explore all the famous places of Delhi i.e. From historical monuments to best restaurant and etc.</p>
                     <p>
                         <ul class="colorlib-social-icons">
                             <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -500,7 +650,9 @@
                 </div>
 
                 <div class="col-md-3 col-md-push-1">
-                    <a href="/contactus"><h4>Contact Us</h4></a>
+                    <a href="/contactus">
+                        <h4>Contact Us</h4>
+                    </a>
                     <ul class="colorlib-footer-links">
                         <li>Delhi, <br> India</li>
                         <li><a href="/contactus">+ 0000 0000 00</a></li>
@@ -540,6 +692,8 @@
     <!-- Magnific Popup -->
     <script src="User_Assets/js/jquery.magnific-popup.min.js"></script>
     <script src="User_Assets/js/magnific-popup-options.js"></script>
+
+    <script src="User_Assets/js/bootstrap-datepicker.js"></script>
     <!-- Stellar Parallax -->
     <script src="User_Assets/js/jquery.stellar.min.js"></script>
     <!-- Main -->
