@@ -12,6 +12,7 @@ const phoneInput = window.intlTelInput(phoneInputField, {
   initialCountry: "in",
 });
 
+// For changing themes
 const toggleSwitch = document.querySelector(".togglebtn");
 const text = $("#light-dark-text");
 const icon = $("#light-dark-icon");
