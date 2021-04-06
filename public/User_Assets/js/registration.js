@@ -14,34 +14,27 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 
 // For changing themes
 const toggleSwitch = document.querySelector(".togglebtn");
-const text = $("#light-dark-text");
-const icon = $("#light-dark-icon");
-function darkMode() {
-  text.text("Dark");
-  icon.attr("class", "fa fa-moon-o");
-}
-function lightMode() {
-  text.text("Light");
-  icon.attr("class", "fa fa-sun-o");
-}
+
 function switchTheme(event) {
+  document.querySelector(".tumbler").classList.toggle("tumbler--night-mode");
   if (event.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
-    darkMode();
   } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
-    lightMode();
   }
 }
 toggleSwitch.addEventListener("change", switchTheme);
+
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
 
   if (currentTheme === "dark") {
+    document.querySelector(".tumbler").classList.add("tumbler--night-mode");
     toggleSwitch.checked = true;
-    darkMode();
+  } else {
+    document.querySelector(".tumbler").classList.remove("tumbler--night-mode");
   }
 }
