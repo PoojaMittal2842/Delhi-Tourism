@@ -653,13 +653,13 @@ figure {
 #colorlib-reservation .nav-tabs li {
     padding: 0;
     margin-right: 2px;
-    background: #FFDD00;
+    background: var(--primary-color);
     font-size: 16px !important;
 }
 
 #colorlib-reservation .nav-tabs li a {
     padding: 15px 20px !important;
-    color: #000;
+    color: var(--primary-background-inverse);
 }
 
 #colorlib-reservation .nav-tabs li.active {
