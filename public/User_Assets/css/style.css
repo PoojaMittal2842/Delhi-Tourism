@@ -663,7 +663,7 @@ figure {
 }
 
 #colorlib-reservation .nav-tabs li.active {
-    color: #fff !important;
+    color: var(--primary-background) !important;
     background: #2C2E3E !important;
 }
 
