@@ -128,11 +128,6 @@ body {
     cursor: pointer;
 }
 
-.nav a:hover {
-    color: turquoise;
-    font-size: 25px;
-}
-
 #nav_img {
     position: absolute;
     left: 20px;
@@ -144,7 +139,7 @@ body {
 }
 
 .main_header__div {
-    height: calc(100vh - 20vh);
+    height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)), url('https://cdn.pixabay.com/photo/2020/02/02/17/24/travel-4813658_1280.jpg');
     background-size: var(--bg-size);
     width: 100%;
@@ -187,7 +182,16 @@ body {
 .main_header__div span {
     font-family: var(--title);
 }
+.animateWord span{
+    margin-left: 40px;
+}
 
+.text-uppercase {
+    margin-left: 40px;
+}
+.animateWord {
+    margin-top: 100px;
+}
 .animateWord div {
     overflow: hidden;
     position: relative;

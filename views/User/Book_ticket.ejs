@@ -53,27 +53,57 @@
 <!-- Body -->
 
 <body>
-    <nav class="nav">
-        <a href="/" id="nav_img"><img src="User_Assets/images/delhi-tourism.png" alt="" height="80px" width="110px"></a>
-        <a href="/"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
-        <a href="/bookticket" target="_blank"><i class="fas fa-hotel"></i>&nbsp;Book Pass</a>
-        <a href="/browseplace" target="_blank"><i class="fas fa-place-of-worship"></i></i>&nbsp;Places To Visit</a>
-        <a href="/contactus" target="_blank"><i class="fa fa-plug" aria-hidden="true"></i>&nbsp;Contact us</a>
-        <a href="/login" target="_blank" id="register">Login&nbsp;<i class="fas fa-sign-in-alt" ></i></a>
-        <a><span id="light-dark-text">Light</span><i id="light-dark-icon" style="margin-left:6px" class="fa fa-sun-o" aria-hidden="true"></i></a>
-        <input type="checkbox" name="check2" id="check2" class="togglebtn"/><label style="margin-bottom: 0px;" for="check2"><b></b></label>
-    </nav>
-    <header class="main_header">
-        <div class="d-flex justify-content-center align-items-center flex-column py-5 top_head">
-            <h1 class="text-uppercase main_heading">Delhi Tourism </h1>
+    <nav class="colorlib-nav" role="navigation">
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="colorlib-logo"><a href="/"><img src="User_Assets/images/logo.jpg" style="border-radius:10%;width:95px;height:80px"></a></div>
+                    </div>
+                    <div class="col-xs-10 text-right">
+                        <ul>
+                            <div class="menu-1">
+                                <li><a href="/">Home</a></li>
+                                <li class="has-dropdown">
+                                    <a>Explore</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/browseplace" target="none">Browse Places</a></li>
+                                        <li><a href="/category" target="none">Categories</a></li>
+                                        <li><a href="/addnewplace" target="none">+ Add Places</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="/bookticket">Book Ticket</a></li>
+                                <li><a href="/contactus">Contact Us</a></li>
+                                <li class="has-dropdown">
+                                    <a href="/login">Login</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/registration">Register</a></li>
+                                        <li><a href="/userprofile" target="none">View Profile</a></li>
+                                        <li><a href="/changepassword">Change Password</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><span id="light-dark-text">Light</span><i id="light-dark-icon" style="margin-left:6px" class="fa fa-sun-o" aria-hidden="true"></i></a>
+                                    <input type="checkbox" name="check2" id="check2" class="togglebtn" /><label style="margin-bottom: 0px;" for="check2"><b></b></label>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </nav>
+
+
+    <header class="main_header">
         <!-- //the main image -->
         <div class="main_header__div d-flex align-items-start
         justify-content-center  flex-column shadow pl-5">
-            <h2 class="animateWord">
+                <h2 class="animateWord">
                 <span>Explore</span>
                 <div>
                     <ul class="flip4">
+                        <li>Delhi Tourism</li>
                         <li>Fairs and Festivals</li>
                         <li>Monuments</li>
                         <li>Foods </li>
@@ -84,7 +114,7 @@
                 </div>
             </h2>
             <button class="text-uppercase" onClick="document.getElementById('bottom').scrollIntoView();">Book pass</button>
-        </div>
+    </div>
     </header>
 
 
@@ -169,7 +199,7 @@
         </div>
     </div>
 
-    <footer id="colorlib-footer" role="contentinfo">
+   <footer id="colorlib-footer" role="contentinfo">
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-3 colorlib-widget">
