@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -13,7 +13,6 @@
     top: 4px;
     border: 3px solid snow;
     z-index: 3;
-
 }
 
 .nav a {
@@ -27,7 +26,6 @@
     font-family: 'Gorditas', cursive;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 .nav a:hover {
@@ -35,12 +33,12 @@
     font-size: 25px;
 }
 
-#nav_img{
+#nav_img {
     position: absolute;
     left: 20px;
 }
 
-#register{
+#register {
     position: absolute;
     right: 20px;
 }
