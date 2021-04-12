@@ -88,7 +88,7 @@
             <!-- Login Form -->
             <div class="d-flex align-items-center col-md-6 col-lg-6 " style= "position: absolute; top: 50%; left: 75%;z-index: 999; text-align: center; padding: 60px 32px; width: 370px; transform: translate(-50%,-50%); background: rgba(255,255,255,0.04); box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);">
                 <p style=" position:absolute; top:5%; margin-left: 15%; font-family: 'Poppins', sans-serif; font-size: medium;">Welcome to Delhi Tourism</p>
-                <form action="#">
+                <form action="/login" method="POST">
                     <div class="row box">
 
                         <!-- Email Address -->
@@ -98,7 +98,7 @@
                                     <i class="fa fa-envelope text-muted"></i>
                                 </span>
                             </div>
-                            <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white" required>
+                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control bg-white" required>
                         </div>
 
                         <!-- Password -->
@@ -113,9 +113,9 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-0">
-                            <a href="#" class="btn btn-primary btn-block py-2">
+                            <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Login</span>
-                            </a>
+                            </button>
                         </div>
 
                         <!-- Divider Text -->

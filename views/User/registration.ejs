@@ -101,7 +101,7 @@
 
             <!-- Registeration Form -->
             <div class="col-md-6 col-lg-6 ml-auto">
-                <form action="#">
+                <form action="/registration" method="POST">
                     <div class="row">
 
                         <!-- First Name -->
@@ -131,7 +131,7 @@
                                     <i class="fa fa-envelope text-muted"></i>
                                 </span>
                             </div>
-                            <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white" required>
+                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control bg-white" required>
                         </div>
 
                         <!-- Country -->
@@ -141,7 +141,7 @@
                                     <i class="fa fa-globe text-muted"></i>
                                 </span>
                             </div>
-                            <input id="country_selector" type="text" class="form-control bg-white " required>
+                            <input id="country_selector" type="text" class="form-control bg-white " name="country" required>
                         </div>
 
                         <!-- Phone Number -->
@@ -151,7 +151,7 @@
                                     <i class="fa fa-phone-square text-muted"></i>
                                 </span>
                             </div>
-                            <input id="phone" type="tel" name="phone" class="form-control bg-white" required>
+                            <input id="phone" type="tel" name="contact" class="form-control bg-white" required>
                         </div>
 
                         <!-- Password -->
@@ -181,9 +181,9 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-0">
-                            <a href="#" class="btn btn-primary btn-block py-2">
+                            <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Create your account</span>
-                            </a>
+                            </button>
                         </div>
 
                         <!-- Divider Text -->
