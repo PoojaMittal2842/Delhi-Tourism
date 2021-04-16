@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin-Blog Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/blog.css">
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- navbar -->
+        <div class="navbar">
+            <!-- nav left -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                    </a>
+                </li>
+                <li class="nav-item name">
+                    <a href="/admin" class=" nav-link">Delhi Tourism</a>
+                </li>
+            </ul>
+            <!-- end nav left -->
+            <!-- form -->
+            <form class="navbar-search">
+                <input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+                <i class="fas fa-search"></i>
+            </form>
+            <!-- end form -->
+            <!-- nav right -->
+            <ul class="navbar-nav nav-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link">
+                        <i class="fas fa-3x fa-bell dropdown-toggle" data-toggle="notification-menu"></i>
+                        <span class="navbar-badge">15</span>
+                    </a>
+                    <ul id="notification-menu" class="dropdown-menu notification-menu">
+                        <div class="dropdown-menu-header">
+                            <span>
+                                Notifications
+                            </span>
+                        </div>
+                        <div class="dropdown-menu-content overlay-scrollbar scrollbar-hover">
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <span>
+                                View all notifications
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item avt-wrapper">
+                    <div class="avt dropdown">
+                        <img src="Admin_Assets/assets/tuat.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+                        <ul id="user-menu" class="dropdown-menu">
+                            <li class="dropdown-menu-item">
+                                <a class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <span>Booking</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-spinner"></i>
+                                    </div>
+                                    <span>Searched Places</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </div>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- end nav right -->
+        </div>
+        <!-- end navbar -->
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item">
+                    <a href="/admin" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <span>Places</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>Booking</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link active">
+                        <div>
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span>Blogs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="banner">
+            <div class="container">
+                <h1 class="banner-title">
+                    <span>Delhi</span> Tourism
+                </h1>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- design -->
+    <section class="design" id="design">
+        <div class="container">
+            <div class="title">
+                <h2>Live Blogs</h2>
+                <p>Blogs which are live on website</p>
+            </div>
+
+            <div class="design-content">
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-1.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">A unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-2.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">A unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-3.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">A unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-4.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">A unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-8.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">A unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="design-item">
+                    <div class="design-img">
+                        <img src="User_Assets/images/tour-7.jpg" alt="">
+                        <span><i class="far fa-heart"></i> 22</span>
+                        <span>Delhi Tourism</span>
+                    </div>
+                    <div class="design-title">
+                        <a href="#">An unforgetable memory from the tour of Delhi</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+            </div>
+        </div>
+    </section>
+    <!-- end of design -->
+
+
+    <!-- blog -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="title">
+                <h2>New Requested Blog</h2>
+                <p>recent blogs which are contributed by the visitors</p>
+            </div>
+            <div class="blog-content">
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/blog-2.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/blog-3.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/blog-4.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/tour-1.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/tour-2.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="User_Assets/images/lotus3.jpg" alt="">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="blog-text">
+                        <span>16 April, 2021</span>
+                        <h2>An unforgetable memory from the tour of Delhi</h2>
+                        <p>An unforgetable memory from the tour of Delhi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <!-- end of item -->
+            </div>
+        </div>
+    </section>
+    <!-- end of blog -->
+
+    <!-- about -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <img src="User_Assets/images/person1.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <div class="title">
+                        <h2>Delhi Tourism</h2>
+                        <p>One place, many memories</p>
+                    </div>
+                    <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque,
+                        whose courtyard accommodates 25,000 people. Nearby is Chandni Chowk, a vibrant bazaar filled with food carts, sweets shops and spice stalls.</p>
+                    <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque,
+                        whose courtyard accommodates 25,000 people. Nearby is Chandni Chowk, a vibrant bazaar filled with food carts, sweets shops and spice stalls.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about -->
+
+    <!-- footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <span>Delhi Tourism</span>
+    </footer>
+    <!-- end of footer -->
+    <script src="Admin_Assets/index.js"></script>
+</body>
+
+</html>
