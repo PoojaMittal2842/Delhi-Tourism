@@ -1,0 +1,110 @@
+/* pretty radio */
+label > input[type="radio"] {
+    display: none;
+  }
+  label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: white;
+  }
+  label > input[type="radio"]:checked + * {
+    color: black;
+  }
+  label > input[type="radio"]:checked + *::before {
+    background: radial-gradient(black 0%, black 40%, transparent 50%, transparent);
+    border-color: black;
+  }
+  
+  /* basic layout */
+  fieldset {
+    margin: 20px;
+    max-width: 400px;
+  }
+  label > input[type="radio"] + * {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+
+.cancelbtn {
+width: auto;
+padding: 10px 18px;
+border-radius: 30px;
+background-color: #f44336;
+}
+
+
+.feedback_container {
+padding: 16px;
+background: linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)
+),url("https://wallpaperaccess.com/full/1896134.jpg");
+}
+
+.span.psw {
+float: right;
+padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+padding-top: 60px;
+border-radius: 10px;
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 2px solid white;
+width: 70%; /* Could be more or less, depending on screen size */
+
+}
+
+.si{
+background-color: rgb(0,0,0,0.5);
+border-radius: 30px;  
+}
+/* The Close Button (x) */
+.feedback_close {
+position: absolute;
+right: 25px;
+top: 0;
+color:white;
+font-size: 35px;
+font-weight: bold;
+}
+
+/* Add Zoom Animation */
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)} 
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)} 
+to {transform: scale(1)}
+}
