@@ -46,6 +46,7 @@
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/7ade57373d.js"></script>
 
+    <link rel="stylesheet" href="User_Assets/css/feedback.css">
 
 </head>
 
@@ -665,6 +666,59 @@
                             </div>
                         </div>
                     </form>
+                    <br /><br /><br />
+                    <div>Give us your valuable feedback!</div><br />
+                    <div><button type="submit" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Feedback</button></div>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="/action_page.php"  method="post">
+                            <div class="feedback_container" style="font-size: 1.5ch; text-align: left;">
+                                <div style="background-color:black; padding: 10px; font-size: large; text-align: center;">Give us your feedback!</div><br /><br />
+                                <label for="fname" style="color:white; font-size: medium; padding: 12px 20px;"><b>Name</b></label>
+                                <input type="text" class="si" style="color: white; font-size: medium; padding: 12px 20px;" placeholder="Enter Name" name="fname" required>&emsp;&emsp;&emsp;&emsp;
+                                <label for="fname" style="color:white; font-size: medium; padding: 12px 20px;"><b>Email</b></label>
+                                <input type="text" class="si" style="color: white; font-size: medium; padding: 12px 20px;" placeholder="Enter Email" name="fname" required><br /><br />
+                                <span style="font-size: medium;">How would you rate your overall experience with our service?</span>&emsp;&emsp;&emsp;&emsp;
+                                <span style="font-size: medium;text-align: left;">What should we improve in order to live up to your expectations?</span><br />
+                                <br />
+                                <label><input type="radio" id="s1" name="f1"><span style="font-size: 20px;">&#128525;</span></label>
+                                <label><input type="radio" id="s1" name="f1"><span style="font-size: 20px;">&#128522;</span></label>
+                                <label><input type="radio" id="s1" name="f1"><span style="font-size: 20px;">&#128528;</span></label>
+                                <label><input type="radio" id="s1" name="f1"><span style="font-size: 20px;">&#128530;</span></label>
+                                <label><input type="radio" id="s1" name="f1"><span style="font-size: 20px;">&#128545;</span></label>
+                                <textarea name="Text1" class="si" cols="60" rows="5" style="color: white; font-size: medium; padding: 12px 20px; float:right" placeholder="Enter your comments!"></textarea>
+                                <br />
+                                <span style="font-size: medium; text-align: left;">How satisfied are you with the comprehensive suggestions?</span><br />
+                                <label><input type="radio" id="s2" name="f2"><span style="font-size: 20px;">&#128525;</span></label>
+                                <label><input type="radio" id="s2" name="f2"><span style="font-size: 20px;">&#128522;</span></label>
+                                <label><input type="radio" id="s2" name="f2"><span style="font-size: 20px;">&#128528;</span></label>
+                                <label><input type="radio" id="s2" name="f2"><span style="font-size: 20px;">&#128530;</span></label>
+                                <label><input type="radio" id="s2" name="f2"><span style="font-size: 20px;">&#128545;</span></label>
+                                <br />
+                                <span style="font-size: medium;text-align: left;">How satisfied are you with our customer support system?</span><br />
+                                <label><input type="radio" id="s3" name="f3"><span style="font-size: 20px;">&#128525;</span></label>
+                                <label><input type="radio" id="s3" name="f3"><span style="font-size: 20px;">&#128522;</span></label>
+                                <label><input type="radio" id="s3" name="f3"><span style="font-size: 20px;">&#128528;</span></label>
+                                <label><input type="radio" id="s3" name="f3"><span style="font-size: 20px;">&#128530;</span></label>
+                                <label><input type="radio" id="s3" name="f3"><span style="font-size: 20px;">&#128545;</span></label>
+                                <br />
+                                <span style="font-size: medium;text-align: left;">Would you recommend our service to others?</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span style="font-size: medium;text-align: left;"><b>Thank you for choosing Delhi Tourism! We hope that you enjoyed</b></span>
+                                <br />
+                                <label><input type="radio" id="s4" name="f4"><span style="font-size: 20px;">&#128525;</span></label>
+                                <label><input type="radio" id="s4" name="f4"><span style="font-size: 20px;">&#128522;</span></label>
+                                <label><input type="radio" id="s4" name="f4"><span style="font-size: 20px;">&#128528;</span></label>
+                                <label><input type="radio" id="s4" name="f4"><span style="font-size: 20px;">&#128530;</span></label>
+                                <label><input type="radio" id="s4" name="f4"><span style="font-size: 20px;">&#128545;</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <span style="font-size: medium;text-align: left;"><b> your experience with us.</b></span>
+                                <br />
+                                <br />
+                                <div style="text-align: center;"><button type="submit" class="btn btn-primary"><b>Submit</b></button></div>
+                            </div>
+                            <div style="background-color:black; padding: 10px;">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>Cancel</b></button>
+                            </div>
+                        </form>
+                    </div>     
                 </div>
             </div>
         </div>
