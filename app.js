@@ -8,6 +8,7 @@ const request = require('request');
 const passport = require('passport'); // to authenticate
 const LocalStrategy = require('passport-local'); // to authenticate
 const User = require('./models/user');
+const flash = require('connect-flash');
 
 
 const app = express();
@@ -15,7 +16,7 @@ const app = express();
 const { MongoStore } = require('connect-mongo');
 
 const MongoDBStore = require('connect-mongo')(session);
-const dbUrl = 'mongodb://localhost:27017/delhi-tour';
+const dbUrl = 'mongodb://localhost:27017/delhi-touring';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -62,7 +63,7 @@ const sessionConfig = {
 }
 
 app.use(session(sessionConfig))
-
+app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -74,6 +75,8 @@ passport.deserializeUser(User.deserializeUser()); // to store the user in altern
 app.use((req, res, next) => {
     console.log(req.session)
     res.locals.currentUser = req.user; //to have that user then flash it
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
     next();
 })
 
