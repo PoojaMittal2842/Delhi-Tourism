@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="User_Assets/css/registration.css">
 
@@ -76,6 +77,24 @@
       </svg>
         </div>
     </div>
+    <div style="margin: 15px 0px;" class="container">
+        <% if(error && error.length>0){%>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%=error%>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+               
+            </button>
+        </div>
+        <%}%>
+        <% if(success && success.length>0){%>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%=success%>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                
+            </button>
+        </div>
+        <%}%>
+    </div>
     <div class="container">
         <div class="row py-5 mt-4">
             <!-- Intro -->
@@ -88,7 +107,7 @@
             <!-- Login Form -->
             <div class="d-flex align-items-center col-md-6 col-lg-6 " style= "position: absolute; top: 50%; left: 75%;z-index: 999; text-align: center; padding: 60px 32px; width: 370px; transform: translate(-50%,-50%); background: rgba(255,255,255,0.04); box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);">
                 <p style=" position:absolute; top:5%; margin-left: 15%; font-family: 'Poppins', sans-serif; font-size: medium;">Welcome to Delhi Tourism</p>
-                <form action="/login" method="POST">
+                <form action="/login" method="POST" class="needs-validation" novalidate>
                     <div class="row box">
 
                         <!-- Email Address -->
@@ -151,6 +170,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="./validateForms.js"></script>    
     <script>
         // For changing themes
 const toggleSwitch = document.querySelector(".togglebtn");
