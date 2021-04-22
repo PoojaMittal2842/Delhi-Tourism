@@ -14,9 +14,10 @@ const flash = require('connect-flash');
 const app = express();
 
 const { MongoStore } = require('connect-mongo');
+const { triggerAsyncId } = require('async_hooks');
 
 const MongoDBStore = require('connect-mongo')(session);
-const dbUrl = 'mongodb://localhost:27017/delhi-touring';
+const dbUrl = 'mongodb://localhost:27017/delhi';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -159,8 +160,9 @@ app.get('/logout', (req, res) => {
     });
 });
 
-app.get('/userprofile', (req, res) => {
-    res.render('User/User_Profile');
+app.get('/userprofile', async(req, res) => {
+    const user = await User.findById(req.user._id);
+    res.render('User/User_Profile',{user});
 });
 
 
