@@ -2679,3 +2679,17 @@ input[type="text"] {
     margin-right:100px
   }
 
+.contactus-form{
+      background-color: var(--primary-input-background);
+      border:2px solid var(--primary-input-border);
+  }
+  .contactus-form:focus{
+    background-color: var(--primary-input-background);
+    border:2px solid var(--primary-input-border);
+}
+
+  .contactus-button{
+      background-color: var(--primary-color)!important;
+      border:1.5px solid var(--primary-color)!important;
+  }
+
