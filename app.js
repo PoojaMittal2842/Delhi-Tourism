@@ -101,6 +101,9 @@ app.get('/admin', (req, res) => {
 app.get('/admin_blog', (req, res) => {
     res.render('Admin/blog');
 });
+app.get('/admin_booking', (req, res) => {
+    res.render('Admin/booking');
+});
 
 app.get('/addnewplace', (req, res) => {
     res.render('User/add_new_place');
@@ -162,7 +165,7 @@ app.get('/logout', (req, res) => {
 
 app.get('/userprofile', async(req, res) => {
     const user = await User.findById(req.user._id);
-    res.render('User/User_Profile',{user});
+    res.render('User/User_Profile', { user });
 });
 
 

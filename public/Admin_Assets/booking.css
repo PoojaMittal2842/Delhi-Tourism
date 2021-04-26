@@ -1,0 +1,21 @@
+.page-content-wrapper {
+    padding: 10em 3em 23em 17em;
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, .87);
+    text-align: left;
+}
+
+.user-circle-img img {
+    border-radius: 50%;
+    box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 20%);
+    border: 1px solid #fff;
+}
+
+.card-box {
+    border-radius: 5%;
+    box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 20%);
+    border: 1px solid rgba(105, 104, 104, 0.521);
+}
