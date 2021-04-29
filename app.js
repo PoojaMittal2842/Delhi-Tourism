@@ -94,15 +94,32 @@ app.get('/', async(req, res) => {
     }
 
 });
-
+app.get('/adminlogin',(req,res)=>{
+    res.render('Admin/login');
+});
 app.get('/admin', (req, res) => {
-    res.render('Admin/index');
+    var id=req.session.code;
+    if(id == 20){
+        res.render('Admin/index');
+    }else{
+        res.render('layouts/error');
+    }
+});
+app.post('/adminlogin',async(req,res)=>{
+    var password=req.body.password;
+    req.session.code=null;
+    if( password == "Admin@123")
+    {
+        req.session.code=20;
+        console.log(req.session.code);
+        res.redirect('/admin');
+    }
+    else{
+        res.render('layouts/error');
+    }
 });
 app.get('/admin_blog', (req, res) => {
     res.render('Admin/blog');
-});
-app.get('/admin_booking', (req, res) => {
-    res.render('Admin/booking');
 });
 
 app.get('/addnewplace', (req, res) => {
@@ -165,7 +182,7 @@ app.get('/logout', (req, res) => {
 
 app.get('/userprofile', async(req, res) => {
     const user = await User.findById(req.user._id);
-    res.render('User/User_Profile', { user });
+    res.render('User/User_Profile',{user});
 });
 
 
