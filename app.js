@@ -142,6 +142,26 @@ app.get('/changepassword', (req, res) => {
     res.render('User/changepassword');
 });
 
+app.post('/changepassword',async(req,res)=>{
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        var pass=req.body.password;
+        var changepass=req.body.changepass;
+        if(pass == changepass)
+        {
+            user.setPassword(pass,function(){
+                user.save();
+                res.redirect('/');
+            })
+        }
+        else{
+            res.render('layouts/error');
+        }
+    }
+});
+
 app.get('/contactus', (req, res) => {
     res.render('User/contactus');
 });
