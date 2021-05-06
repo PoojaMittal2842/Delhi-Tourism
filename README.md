@@ -1,11 +1,11 @@
 <div align="center"> <h1> Delhi-Tourism </h1></div>
 
 ## About 
-The capital of India, Delhi is a cosmopolitan city with a historic old Delhi and the modern New Delhi. From historical monuments to crowded shopping malls, from an extensive network of the modern metro system to Delhi University campus, Dilli has multiple personalities and is considered to be the city with a heart.<br>
-Our website is designed to explore the places of Delhi. This website includes all the famous places to visit by tourists from all over the world. Going through this website will make you explore all the famous places of Delhi i.e. From historical monuments to best restaurant and etc.
+The capital of India, Delhi is a cosmopolitan city with historic old Delhi and modern New Delhi. From historical monuments to crowded shopping malls, from an extensive network of the modern metro system to the Delhi University campus, Dilli has multiple personalities and is considered to be the city with a heart.<br>
+Our website is designed to explore the places of Delhi. This website includes all the famous places to visit by tourists from all over the world. Going through this website will make you explore all the famous places of Delhi i.e. From historical monuments to the best restaurants and etc.
 ### Let's See How To start your contribution :
-Before contributing to this project make sure to go through the Readme.md and contributing.md of this project for better clarity of how to make approach towards contributing to a project.
-## Important !
+Before contributing to this project make sure to go through the Readme.md and contributing.md of this project for better clarity of how to make an approach towards contributing to a project.
+## Important!
 -Please follow the [contributors](/contributors.md) doc for the functionalities of the website with the pages as well. <br>
 -Please stick to the phases of execution as given in the [contributors](/contributors.md) doc.
 
@@ -29,3 +29,5 @@ Read our [contributing](/contributors.md) file to know how you can get started w
     <img src="gssoc.png" alt="GSSoC" />
   </a>
 </p>
+
+
