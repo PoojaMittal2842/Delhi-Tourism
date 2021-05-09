@@ -201,8 +201,37 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/userprofile', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/User_Profile',{user});
+    }
+});
+
+app.get('/updateprofile',async(req,res)=>{
     const user = await User.findById(req.user._id);
-    res.render('User/User_Profile',{user});
+    res.render('User/update_profile.ejs',{user});
+});
+
+app.post('/updateprofile',async(req,res)=>{
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        const firstname=req.body.firstname;
+        const lastname=req.body.lastname;
+        const username=req.body.username;
+        const country=req.body.country;
+        const contact=req.body.contact;
+        user.firstname=firstname;
+        user.lastname=lastname;
+        user.username=username;
+        user.country=country;
+        user.contact=contact;
+        await user.save();
+        res.redirect('/userprofile');
+    }
 });
 
 
@@ -210,3 +239,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serving on port ${port}`);
 })
+
