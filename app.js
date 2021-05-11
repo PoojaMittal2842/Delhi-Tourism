@@ -233,6 +233,9 @@ app.post('/updateprofile',async(req,res)=>{
         res.redirect('/userprofile');
     }
 });
+app.get('/feedback',(req,res)=>{
+    res.render('User/feedback');
+});
 
 
 const port = process.env.PORT || 3000;
