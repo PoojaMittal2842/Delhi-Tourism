@@ -94,30 +94,34 @@ app.get('/', async(req, res) => {
     }
 
 });
-app.get('/adminlogin',(req,res)=>{
+
+app.get('/adminlogin', (req, res) => {
     res.render('Admin/login');
 });
 app.get('/admin', (req, res) => {
-    var id=req.session.code;
-    if(id == 20){
+    var id = req.session.code;
+    if (id == 20) {
         res.render('Admin/index');
-    }else{
+    } else {
         res.render('layouts/error');
     }
 });
-app.post('/adminlogin',async(req,res)=>{
-    var password=req.body.password;
-    req.session.code=null;
-    if( password == "Admin@123")
-    {
-        req.session.code=20;
+app.post('/adminlogin', async(req, res) => {
+    var password = req.body.password;
+    req.session.code = null;
+    if (password == "Admin@123") {
+        req.session.code = 20;
         console.log(req.session.code);
         res.redirect('/admin');
-    }
-    else{
+    } else {
         res.render('layouts/error');
     }
 });
+
+app.get('/adminusers', (req, res) => {
+    res.render('Admin/users');
+});
+
 app.get('/admin_blog', (req, res) => {
     res.render('Admin/blog');
 });
@@ -142,21 +146,19 @@ app.get('/changepassword', (req, res) => {
     res.render('User/changepassword');
 });
 
-app.post('/changepassword',async(req,res)=>{
+app.post('/changepassword', async(req, res) => {
     if (req.user == undefined) {
         res.render('User/index');
     } else {
         const user = await User.findById(req.user._id);
-        var pass=req.body.password;
-        var changepass=req.body.changepass;
-        if(pass == changepass)
-        {
-            user.setPassword(pass,function(){
+        var pass = req.body.password;
+        var changepass = req.body.changepass;
+        if (pass == changepass) {
+            user.setPassword(pass, function() {
                 user.save();
                 res.redirect('/');
             })
-        }
-        else{
+        } else {
             res.render('layouts/error');
         }
     }
@@ -205,30 +207,30 @@ app.get('/userprofile', async(req, res) => {
         res.render('User/index');
     } else {
         const user = await User.findById(req.user._id);
-        res.render('User/User_Profile',{user});
+        res.render('User/User_Profile', { user });
     }
 });
 
-app.get('/updateprofile',async(req,res)=>{
+app.get('/updateprofile', async(req, res) => {
     const user = await User.findById(req.user._id);
-    res.render('User/update_profile.ejs',{user});
+    res.render('User/update_profile.ejs', { user });
 });
 
-app.post('/updateprofile',async(req,res)=>{
+app.post('/updateprofile', async(req, res) => {
     if (req.user == undefined) {
         res.render('User/index');
     } else {
         const user = await User.findById(req.user._id);
-        const firstname=req.body.firstname;
-        const lastname=req.body.lastname;
-        const username=req.body.username;
-        const country=req.body.country;
-        const contact=req.body.contact;
-        user.firstname=firstname;
-        user.lastname=lastname;
-        user.username=username;
-        user.country=country;
-        user.contact=contact;
+        const firstname = req.body.firstname;
+        const lastname = req.body.lastname;
+        const username = req.body.username;
+        const country = req.body.country;
+        const contact = req.body.contact;
+        user.firstname = firstname;
+        user.lastname = lastname;
+        user.username = username;
+        user.country = country;
+        user.contact = contact;
         await user.save();
         res.redirect('/userprofile');
     }
@@ -239,4 +241,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serving on port ${port}`);
 })
-

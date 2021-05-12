@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/style.css">
+    <title>Admin - Active Users</title>
+    <style type="text/css">
+        body {
+            margin-top: 10em;
+            background: #f3f3f3;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .sidebar {
+            margin-top: -4.6em;
+        }
+        
+        .start {
+            padding-left: 160px;
+        }
+        
+        .card.user-card {
+            border-top: none;
+            -webkit-box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
+            -webkit-transition: all 150ms linear;
+            transition: all 150ms linear;
+        }
+        
+        .card {
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+            box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+            border: none;
+            margin-bottom: 30px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            width: 300px;
+        }
+        
+        .card .card-header {
+            background-color: transparent;
+            border-bottom: none;
+            padding: 25px;
+        }
+        
+        .card .card-header h5 {
+            margin-bottom: 0;
+            margin-top: -12px;
+            color: #222;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 10px;
+            line-height: 1.4;
+        }
+        
+        .card .card-header h6 {
+            font-size: 12px;
+        }
+        
+        .card .card-header+.card-block,
+        .card .card-header+.card-block-big {
+            padding-top: 0;
+        }
+        
+        .user-card .card-block {
+            text-align: center;
+        }
+        
+        .card .card-block {
+            padding: 25px;
+        }
+        
+        .user-card .card-block .user-image {
+            position: relative;
+            margin: 0 auto;
+            display: inline-block;
+            padding: 5px;
+            width: 110px;
+            height: 110px;
+        }
+        
+        .user-card .card-block .user-image img {
+            z-index: 20;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .img-radius {
+            border-radius: 50%;
+        }
+        
+        .f-w-600 {
+            font-weight: 600;
+        }
+        
+        .m-b-10 {
+            margin-bottom: 10px;
+        }
+        
+        .m-t-25 {
+            margin-top: 25px;
+        }
+        
+        .m-t-15 {
+            margin-top: 15px;
+        }
+        
+        .card .card-block p {
+            line-height: 1.4;
+        }
+        
+        .text-muted {
+            color: #919aa3!important;
+        }
+        
+        .user-card .card-block .activity-leval li.active {
+            background-color: #2ed8b6;
+        }
+        
+        .user-card .card-block .activity-leval li {
+            display: inline-block;
+            width: 15%;
+            height: 4px;
+            margin: 0 3px;
+            background-color: #ccc;
+        }
+        
+        .user-card .card-block .counter-block {
+            color: #fff;
+        }
+        
+        .bg-c-blue {
+            background: linear-gradient(45deg, #4099ff, #73b4ff);
+        }
+        
+        .bg-c-green {
+            background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+        }
+        
+        .bg-c-yellow {
+            background: linear-gradient(45deg, #FFB64D, #ffcb80);
+        }
+        
+        .bg-c-pink {
+            background: linear-gradient(45deg, #FF5370, #ff869a);
+        }
+        
+        .m-t-10 {
+            margin-top: 10px;
+        }
+        
+        .p-20 {
+            padding: 20px;
+        }
+        
+        .user-card .card-block .user-social-link i {
+            font-size: 30px;
+        }
+        
+        .text-facebook {
+            color: #3B5997;
+            padding-left: 55px;
+        }
+        
+        .text-twitter {
+            color: #42C0FB;
+        }
+        
+        .text-dribbble {
+            color: #EC4A89;
+        }
+        
+        .social {
+            align-items: center;
+        }
+        
+        .user-card .card-block .user-image:before {
+            bottom: 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        
+        .user-card .card-block .user-image:after,
+        .user-card .card-block .user-image:before {
+            content: "";
+            width: 100%;
+            height: 48%;
+            border: 2px solid #4099ff;
+            position: absolute;
+            left: 0;
+            z-index: 10;
+        }
+        
+        .user-card .card-block .user-image:after {
+            top: 0;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        .user-card .card-block .user-image:after,
+        .user-card .card-block .user-image:before {
+            content: "";
+            width: 100%;
+            height: 48%;
+            border: 2px solid #4099ff;
+            position: absolute;
+            left: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <header>
+        <!-- navbar -->
+        <div class="navbar">
+            <!-- nav left -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                    </a>
+                </li>
+                <li class="nav-item name">
+                    <a href="/admin" class=" nav-link">Delhi Tourism</a>
+                </li>
+            </ul>
+            <!-- end nav left -->
+            <!-- form -->
+            <form class="navbar-search">
+                <input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+                <i class="fas fa-search"></i>
+            </form>
+            <!-- end form -->
+            <!-- nav right -->
+            <ul class="navbar-nav nav-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link">
+                        <i class="fas fa-3x fa-bell dropdown-toggle" data-toggle="notification-menu"></i>
+                        <span class="navbar-badge">15</span>
+                    </a>
+                    <ul id="notification-menu" class="dropdown-menu notification-menu">
+                        <div class="dropdown-menu-header">
+                            <span>
+                                Notifications
+                            </span>
+                        </div>
+                        <div class="dropdown-menu-content overlay-scrollbar scrollbar-hover">
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <span>
+                                View all notifications
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item avt-wrapper">
+                    <div class="avt dropdown">
+                        <img src="Admin_Assets/assets/tuat.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+                        <ul id="user-menu" class="dropdown-menu">
+                            <li class="dropdown-menu-item">
+                                <a class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <span>Booking</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-spinner"></i>
+                                    </div>
+                                    <span>Searched Places</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </div>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- end nav right -->
+        </div>
+        <!-- end navbar -->
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item">
+                    <a href="/admin" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link active">
+                        <div>
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <span>Places</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>Booking</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="/admin_blog" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span>Blogs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container mainbody">
+        <div class="row start">
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 46%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-blue counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link social">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 87%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-green counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 60%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-yellow counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 87%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-green counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 60%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-yellow counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 46%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-blue counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 87%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-green counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Alessa Robert</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                        <hr>
+                        <p class="text-muted m-t-15">Activity Level: 60%</p>
+                        <ul class="list-unstyled activity-leval">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="bg-c-yellow counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>1256</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-user"></i>
+                                    <p>8562</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>189</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                        <hr>
+                        <div class="row justify-content-center user-social-link">
+                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Admin_Assets/index.js"></script>
+    </script>
+</body>
+
+</html>
