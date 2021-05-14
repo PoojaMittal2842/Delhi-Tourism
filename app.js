@@ -119,6 +119,54 @@ app.post('/adminlogin', async(req, res) => {
 });
 
 app.get('/adminusers', (req, res) => {
+    var theme=[{
+        photo:'https://bootdey.com/img/Content/avatar/avatar7.png',
+        color:'blue'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar6.png',
+        color:'green'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar1.png',
+        color:'yellow'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar7.png',
+        color:'blue'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar6.png',
+        color:'green'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar1.png',
+        color:'yellow'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar7.png',
+        color:'blue'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar6.png',
+        color:'green'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar1.png',
+        color:'yellow'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar7.png',
+        color:'blue'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar6.png',
+        color:'green'
+    },
+    {
+        photo:'https://bootdey.com/img/Content/avatar/avatar1.png',
+        color:'yellow'
+    }];
    User.find({},function(err,users){
         res.render('Admin/users',{users,theme});
     });
