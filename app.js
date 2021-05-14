@@ -119,7 +119,9 @@ app.post('/adminlogin', async(req, res) => {
 });
 
 app.get('/adminusers', (req, res) => {
-    res.render('Admin/users');
+   User.find({},function(err,users){
+        res.render('Admin/users',{users,theme});
+    });
 });
 
 app.get('/adminbooking', (req, res) => {
