@@ -19,7 +19,7 @@ const { MongoStore } = require('connect-mongo');
 const { triggerAsyncId } = require('async_hooks');
 
 const MongoDBStore = require('connect-mongo')(session);
-const dbUrl = 'mongodb://localhost:27017/delhi';
+const dbUrl = 'mongodb://localhost:27017/new-delhi';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
