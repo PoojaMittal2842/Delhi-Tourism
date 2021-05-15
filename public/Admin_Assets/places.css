@@ -1,0 +1,79 @@
+h1 {
+    padding-top: 120px;
+    padding-left: 10em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 190px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.gallery:hover .gallery__image {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.gallery__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 23.8%;
+}
+
+.gallery__link {
+    margin: 2px;
+    overflow: hidden;
+    width: 117%;
+}
+
+.gallery__link:hover .gallery__image {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    width: 100%;
+}
+
+.gallery__link:hover .gallery__caption {
+    opacity: 1;
+}
+
+.gallery__thumb {
+    position: relative;
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.gallery__image:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px 15px 15px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transition: .3s;
+    transition: .3s;
+}

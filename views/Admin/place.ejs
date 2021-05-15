@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/style.css">
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/places.css">
+    <title>Admin - Places</title>
+
+</head>
+
+<body>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+    <header>
+        <!-- navbar -->
+        <div class="navbar">
+            <!-- nav left -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                    </a>
+                </li>
+                <li class="nav-item name">
+                    <a href="/admin" class=" nav-link">Delhi Tourism</a>
+                </li>
+            </ul>
+            <!-- end nav left -->
+            <!-- form -->
+            <form class="navbar-search">
+                <input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+                <i class="fas fa-search"></i>
+            </form>
+            <!-- end form -->
+            <!-- nav right -->
+            <ul class="navbar-nav nav-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link">
+                        <i class="fas fa-3x fa-bell dropdown-toggle" data-toggle="notification-menu"></i>
+                        <span class="navbar-badge">15</span>
+                    </a>
+                    <ul id="notification-menu" class="dropdown-menu notification-menu">
+                        <div class="dropdown-menu-header">
+                            <span>
+                                Notifications
+                            </span>
+                        </div>
+                        <div class="dropdown-menu-content overlay-scrollbar scrollbar-hover">
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        <br>
+                                        <span>
+                                            15/03/2021
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="dropdown-menu-footer">
+                            <span>
+                                View all notifications
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item avt-wrapper">
+                    <div class="avt dropdown">
+                        <img src="Admin_Assets/assets/tuat.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+                        <ul id="user-menu" class="dropdown-menu">
+                            <li class="dropdown-menu-item">
+                                <a class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <span>Booking</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-spinner"></i>
+                                    </div>
+                                    <span>Searched Places</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="#" class="dropdown-menu-link">
+                                    <div>
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </div>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- end nav right -->
+        </div>
+        <!-- end navbar -->
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item">
+                    <a href="/admin" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link active">
+                        <div>
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <span>Places</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>Booking</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="/admin_blog" class="sidebar-nav-link">
+                        <div>
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span>Blogs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet"> -->
+
+    <h1>Contributed Photos</h1>
+    <div class="gallery">
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/cover-img-1.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/tour-1.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/jama masjid.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+
+        </div>
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/login.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/jama masjid.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/tour-4.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+
+        </div>
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/redfort1.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/tour-2.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/tour-7.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+
+        </div>
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/blog-3.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/blog-4.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="User_Assets/images/Background.jpg" class="gallery__image">
+                    <figcaption class="gallery__caption">1 liner about photos</figcaption>
+                </figure>
+            </a>
+
+        </div>
+    </div>
+
+    <script src="Admin_Assets/index.js"></script>
+</body>
+
+</html>

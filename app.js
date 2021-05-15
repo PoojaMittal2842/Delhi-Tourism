@@ -122,6 +122,10 @@ app.get('/adminusers', (req, res) => {
     res.render('Admin/users');
 });
 
+app.get('/adminplace', (req, res) => {
+    res.render('Admin/place');
+});
+
 app.get('/adminbooking', (req, res) => {
     res.render('Admin/booking');
 });
