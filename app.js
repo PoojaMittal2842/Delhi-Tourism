@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const multer = require("multer");
+const cors = require("cors");
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
 const methodOverride = require('method-override');
@@ -30,6 +32,9 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
     console.log("Database connected");
 });
+// This middleware is used to enable Cross Origin Resource Sharing This sets Headers to allow access to our client application
+app.use(cors());
+
 
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
@@ -38,6 +43,18 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
+
+// Storage Engin That Tells/Configures Multer for where (destination) and how (filename) to save/upload our files
+const fileStorageEngine = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "./public/uploads"); //important this is a direct path fron our current file to storage location
+    },
+    filename: (req, file, cb) => {
+      cb(null, Date.now() + "--" + file.originalname);
+    },
+  });
+
+  const upload = multer({ storage: fileStorageEngine });
 
 const secret = process.env.SECRET || 'delhi-tourism';
 
@@ -242,8 +259,8 @@ app.get('/registration', (req, res) => {
     res.render('User/registration');
 });
 
-app.post('/registration', (req, res) => {
-    User.register(new User({ username: req.body.username, firstname: req.body.firstname, lastname: req.body.lastname, country: req.body.country, contact: req.body.contact }), req.body.password, function(err, user) {
+app.post('/registration',upload.single("image"), (req, res) => {
+    User.register(new User({ username: req.body.username, firstname: req.body.firstname, lastname: req.body.lastname, country: req.body.country, contact: req.body.contact, image:req.file.filename }), req.body.password, function(err, user) {
         if (err) {
             return res.render('User/registration', { 'error': err.message });
         }
