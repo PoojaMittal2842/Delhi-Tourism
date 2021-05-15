@@ -12,7 +12,8 @@ const UserSchema = new Schema({
     lastname:String,
     password:String,
     country:String,
-    contact:String
+    contact:String,
+    image:String
 });
 
 UserSchema.plugin(passportLocalMongoose);
