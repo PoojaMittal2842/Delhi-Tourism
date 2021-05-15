@@ -119,7 +119,7 @@
 
             <!-- Registeration Form -->
             <div class="col-md-6 col-lg-6 ml-auto">
-                <form action="/registration" method="POST" class="needs-validation" novalidate>
+                <form action="/registration" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
                     <div class="row">
 
                         <!-- First Name -->
@@ -193,6 +193,18 @@
                             <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white" required>
                         </div>
 
+                        <!-- Profile Image -->
+                        <div style="margin-bottom: 25px;" class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text pass-check px-4 bg-white text-muted" id="inputGroupFileAddon01">Profile Picture</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="form-control bg-white custom-file-input" name="image" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01" required>
+                              <label class="border-button-border bg-white custom-file-label" for="inputGroupFile01">Choose a jpeg,jpg,png picture</label>
+                            </div>
+                          </div>
+
                         <div class="form-group col-lg-12">
                             <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                         </div>
@@ -248,4 +260,3 @@
 </body>
 
 </html>
-
