@@ -313,7 +313,24 @@ app.post('/updateprofile', async(req, res) => {
 app.get('/feedback',(req,res)=>{
     res.render('User/feedback');
 });
-
+app.get('/picture_profile',async(req,res)=>{
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/updatepic',{user});
+    }
+});
+app.post('/picture_profile',upload.single("image"),async(req,res)=>{
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        user.image=req.file.filename;
+        await user.save();
+        res.redirect('/userprofile');
+    }
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
