@@ -25,6 +25,10 @@ body {
     transition: background-color .5s, color .5s;
 }
 
+.border-button-border{
+    border:1px solid var(--primary-input-border);
+}
+
 #light-dark{
     color:var(--primary-background-inverse);
 }
