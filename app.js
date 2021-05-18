@@ -301,6 +301,9 @@ app.post('/updateprofile', async(req, res) => {
 app.get('/feedback',(req,res)=>{
     res.render('User/feedback');
 });
+app.get('/faq', (req, res) => {
+    res.render('User/faq');
+});
 app.get('/picture_profile',async(req,res)=>{
     if (req.user == undefined) {
         res.render('User/index');
