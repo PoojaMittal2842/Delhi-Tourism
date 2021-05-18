@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/7ade57373d.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>FAQ</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3 ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+
+  </style>
+  <body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+      <div class="faq active">
+        <h3 class="faq-title"><i class="fa fa-map-marker" aria-hidden="true"></i> Area geography</h3>
+        <p class="faq-text">Located on the banks of the Yamuna River, Delhi is spread over and area of 1,484 kilometers square and is bordered by Haryana and Uttar Pradesh. Two prominent geographical features of Delhi are the Yamuna flood plains and the Delhi Ridge, which originates from the Aravali mountain range.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">
+          <i class="fa fa-money" aria-hidden="true"></i> Notes currencies cards
+        </h3>
+        <p class="faq-text">You will find ATMs and banks across all areas in Delhi. There are also several places across the city where you can change money and travellers cheques.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          <i class="fa fa-mobile" aria-hidden="true"></i> Cellular service for tourists
+        </h3>
+        <p class="faq-text">To avoid high roaming charges, tourists visiting from abroad can easily purchase a local pre-paid SIM card from the many mobile top-up shops in Delhi.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          <i class="fa fa-wifi" aria-hidden="true"></i> Wifi internet
+        </h3>
+        <p class="faq-text">Internet is available in most hotels in Delhi. Apart from that, many restaurants and cafes also provide patrons with free wi-fi facilities.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title"><i class="fa fa-glass" aria-hidden="true"></i> Drinking laws</h3>
+        <p class="faq-text">25 is the minimum age for consumption of alcohol in Delhi.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Safety</h3>
+        <p class="faq-text">Even though Delhi is a relatively safe city and locals are more than willing to help, it is advised not to step out alone, especially after dark to deserted and unfamiliar areas.</p>
+        <button class="faq-toggle">
+          <i class="fa fa-chevron-down"></i>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+      const toggles = document.querySelectorAll(".faq-toggle");
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          toggle.parentNode.classList.toggle("active");
+        });
+      });
+
+    </script>
+  </body>
+</html>
