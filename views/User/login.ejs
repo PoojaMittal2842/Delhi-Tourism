@@ -133,7 +133,7 @@
                                     <i class="fa fa-envelope text-muted"></i>
                                 </span>
                             </div>
-                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control bg-white" required>
+                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control" required>
                         </div>
 
                         <!-- Password -->
@@ -143,7 +143,17 @@
                                     <i class="fa fa-lock text-muted"></i>
                                 </span>
                             </div>
-                            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white" required>
+                            <input id="password" type="password" name="password" placeholder="Password" class="form-control" required>
+                            <i class="fa fa-eye" id="togglePassword" style = "position: absolute; top: 1rem; right: 2rem; cursor: pointer;"></i>
+                            <script>
+                                const togglePassword = document.querySelector('#togglePassword');
+                                const password = document.querySelector('#password');
+                                togglePassword.addEventListener('click', function (e) {
+                                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                password.setAttribute('type', type);
+                                this.classList.toggle('fa-eye-slash');
+                            });
+                            </script>
                         </div>
 
                         <!-- Submit Button -->
