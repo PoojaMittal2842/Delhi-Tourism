@@ -197,8 +197,12 @@ app.get('/bookticket', (req, res) => {
     res.render('User/Book_Ticket');
 });
 
-app.get('/browseplace', (req, res) => {
+app.get('/gallery', (req, res) => {
     res.render('User/gallery');
+});
+
+app.get('/browseplace', (req, res) => {
+    res.render('User/Browse_Place');
 });
 
 app.get('/category', (req, res) => {
