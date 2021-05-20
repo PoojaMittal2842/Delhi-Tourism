@@ -10,6 +10,7 @@ const request = require('request');
 const passport = require('passport'); // to authenticate
 const LocalStrategy = require('passport-local'); // to authenticate
 const User = require('./models/user');
+const Ticket = require('./models/ticket');
 const flash = require('connect-flash');
 
 
@@ -193,8 +194,29 @@ app.get('/addnewplace', (req, res) => {
     res.render('User/add_new_place');
 });
 
-app.get('/bookticket', (req, res) => {
-    res.render('User/Book_Ticket');
+app.get('/bookticket', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/Book_ticket');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/Book_ticket', { user })
+    }
+});
+
+app.post('/bookticket', async(req, res) => {
+    var ticket=new Ticket();
+    const user=await User.findById(req.user._id);
+    ticket.author=user.username;
+    ticket.firstname=req.body.firstname;
+    ticket.lastname=req.body.lastname;
+    ticket.contact=req.body.contact;
+    ticket.date=req.body.date;
+    ticket.email=req.body.email;
+    ticket.time_slot=req.body.time_slot;
+    ticket.adult_no=req.body.no_adult;
+    ticket.children_no=req.body.no_children;
+    await ticket.save();
+    res.redirect('/');
 });
 
 app.get('/gallery', (req, res) => {
