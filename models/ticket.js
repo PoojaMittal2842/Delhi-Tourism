@@ -14,6 +14,5 @@ const TicketSchema = new Schema({
     date:String
 });
 
-TicketSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('Ticket', TicketSchema);

@@ -77,6 +77,7 @@
                                 <li><a href="/contactus">Contact Us</a></li>
                                 <% if(currentUser) {%>
                                 <li><a href="/userprofile"><%= user.firstname %></a></li>
+                                <li><a href="/bookedticket">Booked Ticket</a></li>
                                 <li><a href="/logout">Logout</a></li>
                                 <%}%>
                                 <% if(!currentUser) {%>
@@ -362,3 +363,4 @@
 </body>
 
 </html>
+
