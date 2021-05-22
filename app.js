@@ -186,6 +186,10 @@ app.get('/adminbooking', (req, res) => {
     res.render('Admin/booking');
 });
 
+app.get('/progress', (req, res) => {
+    res.render('Admin/progress');
+});
+
 app.get('/admin_blog', (req, res) => {
     res.render('Admin/blog');
 });
