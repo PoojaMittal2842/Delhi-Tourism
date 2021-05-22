@@ -26,9 +26,12 @@
         <p class="card-text"><span style="font-weight: 500">Number of Adults</span>: <span style="color:orange"><%=tickets[i].adult_no%></span></p>
         <p class="card-text"><span style="font-weight: 500">Number of Childrens</span>: <span style="color:orange"><%=tickets[i].children_no%></span></p>
         <p class="card-text"><span style="font-weight: 500">Time Slot</span>: <span style="color:orange"><%=tickets[i].time_slot%></span></p>
-        <div style="display: flex;justify-content: center;">
-          <button type="button" class="btn btn-warning">Update</button>
-        </div>
+        <form action="/ticket-data" method="POST">
+          <input type="hidden" value="<%=tickets[i]._id%>" name="id">
+          <div style="display: flex;justify-content: center;">
+            <button type="submit" class="btn btn-warning">Update</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
