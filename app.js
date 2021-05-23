@@ -235,6 +235,26 @@ app.get('/bookedticket',async(req,res)=>{
     }
 });
 
+app.post('/ticket-data',async(req,res)=>{
+    const ticket=await Ticket.findById(req.body.id);
+    res.render('User/updateticket',{ticket});
+});
+
+app.post('/updateticket',async(req,res)=>{
+    const ticket= await Ticket.findById(req.body.id);
+    ticket.firstname=req.body.firstname;
+    ticket.lastname=req.body.lastname;
+    ticket.contact=req.body.contact;
+    ticket.date=req.body.date;
+    ticket.email=req.body.email;
+    ticket.time_slot=req.body.time_slot;
+    ticket.adult_no=req.body.no_adult;
+    ticket.children_no=req.body.no_children;
+    await ticket.save();
+    res.redirect('/');
+});
+
+
 app.get('/gallery', (req, res) => {
     res.render('User/gallery');
 });
