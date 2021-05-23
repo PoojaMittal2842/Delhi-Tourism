@@ -11,7 +11,7 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #f05454;
+    --primary-color: #fff;
     --primary-background: #010409;
     --primary-background-inverse: #fff;
     --primary-cards-icon: #2d6187;
@@ -126,7 +126,7 @@ body {
 }
 
 .dropbtn {
-    background-color: var(--primary-color);
+    background-color: #f05454;
     color: var(--primary-background-inverse);
     padding: 16px;
     font-size: 16px;
@@ -136,7 +136,7 @@ body {
 
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: var(--primary-color);
+    background-color: #f05454;
 }
 
 #myInput {
