@@ -133,7 +133,7 @@
                                     <i class="fa fa-envelope text-muted"></i>
                                 </span>
                             </div>
-                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control" required>
+                            <input id="email" type="email" name="username" placeholder="Email Address" class="form-control bg-white" required>
                         </div>
 
                         <!-- Password -->
@@ -143,8 +143,8 @@
                                     <i class="fa fa-lock text-muted"></i>
                                 </span>
                             </div>
-                            <input id="password" type="password" name="password" placeholder="Password" class="form-control" required>
-                            <i class="fa fa-eye" id="togglePassword" style = "position: absolute; top: 1rem; right: 2rem; cursor: pointer;"></i>
+                            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white" required>
+                            <i id = "light-dark" class="fa fa-eye" id="togglePassword" style = "position: absolute; top: 1rem; right: 2rem; cursor: pointer;"></i>
                             <script>
                                 const togglePassword = document.querySelector('#togglePassword');
                                 const password = document.querySelector('#password');
@@ -161,6 +161,10 @@
                             <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Login</span>
                             </button>
+                        </div>
+                        <!-- Forgot Password -->
+                        <div>
+                            <a href="/forgotpass" class="text-primary ml-2 font-weight-bold" style = "float: right;">Forgot Password?</a></p>
                         </div>
 
                         <!-- Divider Text -->
