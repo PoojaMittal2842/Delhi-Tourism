@@ -223,6 +223,18 @@ app.post('/bookticket', async(req, res) => {
     res.redirect('/');
 });
 
+app.post('/adminticket',async(req,res)=>{
+    const user=await User.findById(req.body.adminticket);
+    const tickets=await Ticket.find({author:user.username});
+    if(tickets.length != 0)
+    {
+        res.render('User/booked_ticket',{tickets});
+    }
+    else{
+        res.redirect('/');
+    }
+});
+
 app.get('/bookedticket',async(req,res)=>{
     const user=await User.findById(req.user._id);
     const tickets=await Ticket.find({author:user.username});
