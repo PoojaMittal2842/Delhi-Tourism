@@ -238,6 +238,28 @@ text-decoration: none;
     color: #ffffff;
 
     }
+    .links-button {
+
+background: #ffffff none repeat scroll 0 0;
+
+border: 1px solid red;
+
+color: red;
+
+outline: medium none;
+
+padding: 15px;
+
+text-decoration: none;
+
+}
+.links-button:hover {
+
+    background-color:  red;
+
+    color: #ffffff;
+
+    }
     </style>
 </head>
 
@@ -578,6 +600,12 @@ text-decoration: none;
                             <div style="display: flex;justify-content: center;">
                                 <input type="hidden" value="<%=users[i]._id%>" name="adminticket">
                                 <input type="submit" value="Booked Tickets" class="link-button">
+                            </div>
+                        </form>
+                        <form action="/deleteuser" method="POST">
+                            <div style="display: flex;justify-content: center;">
+                                <input type="hidden" value="<%=users[i]._id%>" name="deleteuser">
+                                <input type="submit" value="Delete user" class="links-button">
                             </div>
                         </form>
                         <div class="bg-c-<%=theme[i].color%> counter-block m-t-10 p-20">

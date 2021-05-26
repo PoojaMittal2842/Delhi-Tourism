@@ -235,6 +235,12 @@ app.post('/adminticket',async(req,res)=>{
     }
 });
 
+app.post('/deleteuser',async(req,res)=>{
+    const id=req.body.deleteuser;
+    await User.findByIdAndDelete(id);
+    res.redirect('/');
+});
+
 app.get('/bookedticket',async(req,res)=>{
     const user=await User.findById(req.user._id);
     const tickets=await Ticket.find({author:user.username});
