@@ -333,6 +333,10 @@ app.get('/registration', (req, res) => {
     res.render('User/registration');
 });
 
+app.get('/forgotpass', (req, res) => {
+    res.render('User/forgotpass');
+});
+
 app.post('/registration',upload.single("image"), (req, res) => {
     User.register(new User({ username: req.body.username, firstname: req.body.firstname, lastname: req.body.lastname, country: req.body.country, contact: req.body.contact, image:req.file.filename }), req.body.password, function(err, user) {
         if (err) {
