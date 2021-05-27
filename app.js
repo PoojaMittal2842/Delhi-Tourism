@@ -12,6 +12,7 @@ const LocalStrategy = require('passport-local'); // to authenticate
 const User = require('./models/user');
 const Ticket = require('./models/ticket');
 const flash = require('connect-flash');
+const Hotel = require('./models/hotel');
 
 
 const app = express();
