@@ -215,7 +215,7 @@ app.get('/bookhotel', async(req, res) => {
         const user = await User.findById(req.user._id);
         res.render('User/hotel', { user })
     }
-})
+});
 
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
