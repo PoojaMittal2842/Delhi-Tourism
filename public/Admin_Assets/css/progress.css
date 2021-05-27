@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-image: url(./assets/dash-bg-01.jpg);
+    background-image: url(../assets/dash-bg-01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
