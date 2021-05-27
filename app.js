@@ -288,6 +288,22 @@ app.post('/updateticket',async(req,res)=>{
     res.redirect('/');
 });
 
+app.post('/bookhotel', async(req, res) => {
+    var hotel=new Hotel();
+    const user=await User.findById(req.user._id);
+    hotel.author=user.username;
+    hotel.firstname=req.body.firstname;
+    hotel.lastname=req.body.lastname;
+    hotel.contact=req.body.contact;
+    hotel.checkin=req.body.checkindate;
+    hotel.checkout=req.body.checkoutdate;
+    hotel.email=req.body.email;
+    hotel.people=req.body.people;
+    hotel.type=req.body.type;
+    await hotel.save();
+    res.redirect('/');
+});
+
 
 app.get('/gallery', (req, res) => {
     res.render('User/gallery');
