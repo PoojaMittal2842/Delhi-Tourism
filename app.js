@@ -12,6 +12,7 @@ const LocalStrategy = require('passport-local'); // to authenticate
 const User = require('./models/user');
 const Ticket = require('./models/ticket');
 const flash = require('connect-flash');
+const Hotel = require('./models/hotel');
 
 
 const app = express();
@@ -207,6 +208,15 @@ app.get('/bookticket', async(req, res) => {
     }
 });
 
+app.get('/bookhotel', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/hotel', { user })
+    }
+});
+
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
     const user=await User.findById(req.user._id);
@@ -275,6 +285,22 @@ app.post('/updateticket',async(req,res)=>{
     ticket.adult_no=req.body.no_adult;
     ticket.children_no=req.body.no_children;
     await ticket.save();
+    res.redirect('/');
+});
+
+app.post('/bookhotel', async(req, res) => {
+    var hotel=new Hotel();
+    const user=await User.findById(req.user._id);
+    hotel.author=user.username;
+    hotel.firstname=req.body.firstname;
+    hotel.lastname=req.body.lastname;
+    hotel.contact=req.body.contact;
+    hotel.checkin=req.body.checkindate;
+    hotel.checkout=req.body.checkoutdate;
+    hotel.email=req.body.email;
+    hotel.people=req.body.people;
+    hotel.type=req.body.type;
+    await hotel.save();
     res.redirect('/');
 });
 
