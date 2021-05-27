@@ -208,6 +208,15 @@ app.get('/bookticket', async(req, res) => {
     }
 });
 
+app.get('/bookhotel', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/hotel', { user })
+    }
+})
+
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
     const user=await User.findById(req.user._id);
