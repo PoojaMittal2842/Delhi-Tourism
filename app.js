@@ -269,7 +269,17 @@ app.get('/bookedticket',async(req,res)=>{
     }
 });
 
-
+app.get('/bookedhotel',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const hotels=await Hotel.find({author:user.username});
+    if(hotels.length != 0)
+    {
+        res.render('User/booked_hotel',{hotels});
+    }
+    else{
+        res.redirect('/');
+    }
+});
    
 
 app.post('/ticket-data',async(req,res)=>{
