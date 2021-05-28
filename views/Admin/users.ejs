@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="Admin_Assets/style.css">
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/css/style.css">
     <title>Admin - Active Users</title>
     <style type="text/css">
         body {
@@ -216,50 +216,34 @@
             left: 0;
             z-index: 10;
         }
+        
         .link-button {
-
-background: #ffffff none repeat scroll 0 0;
-
-border: 1px solid #ffdd00;
-
-color: #ffdd00;
-
-outline: medium none;
-
-padding: 15px;
-
-text-decoration: none;
-
-}
-.link-button:hover {
-
-    background-color:  #ffdd00;
-
-    color: #ffffff;
-
-    }
-    .links-button {
-
-background: #ffffff none repeat scroll 0 0;
-
-border: 1px solid red;
-
-color: red;
-
-outline: medium none;
-
-padding: 15px;
-
-text-decoration: none;
-
-}
-.links-button:hover {
-
-    background-color:  red;
-
-    color: #ffffff;
-
-    }
+            background: #ffffff none repeat scroll 0 0;
+            border: 1px solid #ffdd00;
+            color: #ffdd00;
+            outline: medium none;
+            padding: 15px;
+            text-decoration: none;
+        }
+        
+        .link-button:hover {
+            background-color: #ffdd00;
+            color: #ffffff;
+        }
+        
+        .links-button {
+            background: #ffffff none repeat scroll 0 0;
+            border: 1px solid red;
+            color: red;
+            outline: medium none;
+            padding: 15px;
+            text-decoration: none;
+        }
+        
+        .links-button:hover {
+            background-color: red;
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -584,60 +568,63 @@ text-decoration: none;
     <div class="container mainbody">
         <div class="row start">
             <% for(let i=0;i< users.length;i++){ %>
-            <div class="col-md-4">
-                <div class="card user-card">
-                    <div class="card-header">
-                        <h5><%=users[i].firstname%> <%=users[i].lastname%></h5>
-                    </div>
-                    <div class="card-block">
-                        <div class="user-image">
-                            <img src="uploads/<%=users[i].image%>" class="img-radius" alt="User-Profile-Image">
+                <div class="col-md-4">
+                    <div class="card user-card">
+                        <div class="card-header">
+                            <h5>
+                                <%=users[i].firstname%>
+                                    <%=users[i].lastname%>
+                            </h5>
                         </div>
-                        <p>Email: <span class="text-muted"><%=users[i].username%></span></p>
-                        <p>Contact: <span class="text-muted"><%=users[i].contact%></span></p>
-                        <p>Country: <span class="text-muted"><%=users[i].country%></span></p>
-                        <form action="/adminticket" method="POST">
-                            <div style="display: flex;justify-content: center;">
-                                <input type="hidden" value="<%=users[i]._id%>" name="adminticket">
-                                <input type="submit" value="Booked Tickets" class="link-button">
+                        <div class="card-block">
+                            <div class="user-image">
+                                <img src="uploads/<%=users[i].image%>" class="img-radius" alt="User-Profile-Image">
                             </div>
-                        </form>
-                        <form action="/deleteuser" method="POST">
-                            <div style="display: flex;justify-content: center;">
-                                <input type="hidden" value="<%=users[i]._id%>" name="deleteuser">
-                                <input type="submit" value="Delete user" class="links-button">
+                            <p>Email: <span class="text-muted"><%=users[i].username%></span></p>
+                            <p>Contact: <span class="text-muted"><%=users[i].contact%></span></p>
+                            <p>Country: <span class="text-muted"><%=users[i].country%></span></p>
+                            <form action="/adminticket" method="POST">
+                                <div style="display: flex;justify-content: center;">
+                                    <input type="hidden" value="<%=users[i]._id%>" name="adminticket">
+                                    <input type="submit" value="Booked Tickets" class="link-button">
+                                </div>
+                            </form>
+                            <form action="/deleteuser" method="POST">
+                                <div style="display: flex;justify-content: center;">
+                                    <input type="hidden" value="<%=users[i]._id%>" name="deleteuser">
+                                    <input type="submit" value="Delete user" class="links-button">
+                                </div>
+                            </form>
+                            <div class="bg-c-<%=theme[i].color%> counter-block m-t-10 p-20">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <i class="fa fa-comment"></i>
+                                        <p>1256</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-user"></i>
+                                        <p>8562</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-suitcase"></i>
+                                        <p>189</p>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-                        <div class="bg-c-<%=theme[i].color%> counter-block m-t-10 p-20">
-                            <div class="row">
-                                <div class="col-4">
-                                    <i class="fa fa-comment"></i>
-                                    <p>1256</p>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-user"></i>
-                                    <p>8562</p>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-suitcase"></i>
-                                    <p>189</p>
-                                </div>
+                            <p class="m-t-15 text-muted">A short description of the user profile.</p>
+                            <hr>
+                            <div class="row justify-content-center user-social-link social">
+                                <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                                <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                                <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
                             </div>
-                        </div>
-                        <p class="m-t-15 text-muted">A short description of the user profile.</p>
-                        <hr>
-                        <div class="row justify-content-center user-social-link social">
-                            <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
-                            <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-                            <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-dribbble"></i></a></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <%}%>
+                <%}%>
         </div>
     </div>
-    <script src="Admin_Assets/index.js"></script>
+    <script src="Admin_Assets/js/index.js"></script>
     </script>
 </body>
 
