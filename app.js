@@ -269,6 +269,11 @@ app.get('/bookedticket',async(req,res)=>{
     }
 });
 
+app.get('/bookedhotel',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const hotels=await Hotel.find({author:user.username});
+    if(hotels.length != 0)
+
 app.post('/ticket-data',async(req,res)=>{
     const ticket=await Ticket.findById(req.body.id);
     res.render('User/updateticket',{ticket});
