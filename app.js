@@ -269,7 +269,7 @@ app.get('/bookedticket',async(req,res)=>{
     }
 });
 
-app.get('/bookedhotel',async(req,res)=>{
+
    
 
 app.post('/ticket-data',async(req,res)=>{
