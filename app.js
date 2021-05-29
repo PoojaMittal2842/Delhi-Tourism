@@ -287,6 +287,11 @@ app.post('/ticket-data',async(req,res)=>{
     res.render('User/updateticket',{ticket});
 });
 
+app.post('/hotel-data',async(req,res)=>{
+    const hotel=await Hotel.findById(req.body.id);
+    res.render('User/updatehotel',{hotel});
+});
+
 app.post('/updateticket',async(req,res)=>{
     const ticket= await Ticket.findById(req.body.id);
     ticket.firstname=req.body.firstname;
@@ -298,6 +303,20 @@ app.post('/updateticket',async(req,res)=>{
     ticket.adult_no=req.body.no_adult;
     ticket.children_no=req.body.no_children;
     await ticket.save();
+    res.redirect('/');
+});
+
+app.post('/updatehotel',async(req,res)=>{
+    const hotel= await Hotel.findById(req.body.id);
+    hotel.firstname=req.body.firstname;
+    hotel.lastname=req.body.lastname;
+    hotel.contact=req.body.contact;
+    hotel.checkin=req.body.checkindate;
+    hotel.checkout=req.body.checkoutdate;
+    hotel.email=req.body.email;
+    hotel.people=req.body.people;
+    hotel.type=req.body.type;
+    await hotel.save();
     res.redirect('/');
 });
 
