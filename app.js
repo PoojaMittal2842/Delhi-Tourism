@@ -220,6 +220,15 @@ app.get('/bookhotel', async(req, res) => {
     }
 });
 
+app.get('/bookflight', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/flight', { user })
+    }
+});
+
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
     const user=await User.findById(req.user._id);
@@ -235,6 +244,23 @@ app.post('/bookticket', async(req, res) => {
     await ticket.save();
     res.redirect('/');
 });
+
+app.post('/bookflight', async(req, res) => {
+    var flight=new Flight();
+    const user=await User.findById(req.user._id);
+    flight.author=user.username;
+    flight.firstname=req.body.firstname;
+    flight.lastname=req.body.lastname;
+    flight.contact=req.body.contact;
+    flight.date=req.body.date;
+    flight.email=req.body.email;
+    flight.people=req.body.people;
+    flight.type=req.body.type;
+    flight.place=req.body.place;
+    await flight.save();
+    res.redirect('/');
+});
+
 
 app.post('/adminticket',async(req,res)=>{
     const user=await User.findById(req.body.adminticket);
