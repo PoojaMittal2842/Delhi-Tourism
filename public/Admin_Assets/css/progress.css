@@ -1,5 +1,5 @@
 html {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 body {
@@ -133,7 +133,7 @@ a:focus {
 }
 
 .task {
-    margin-right: 45em;
+    margin-right: 30em;
 }
 
 .tm-link-black {
