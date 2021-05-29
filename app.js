@@ -304,6 +304,18 @@ app.get('/bookedticket',async(req,res)=>{
     }
 });
 
+app.get('/bookedflight',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const flights=await Flight.find({author:user.username});
+    if(flights.length != 0)
+    {
+        res.render('User/booked_flight',{flights});
+    }
+    else{
+        res.redirect('/');
+    }
+});
+
 app.get('/bookedhotel',async(req,res)=>{
     const user=await User.findById(req.user._id);
     const hotels=await Hotel.find({author:user.username});
