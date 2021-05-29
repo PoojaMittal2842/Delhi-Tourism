@@ -13,6 +13,7 @@ const User = require('./models/user');
 const Ticket = require('./models/ticket');
 const flash = require('connect-flash');
 const Hotel = require('./models/hotel');
+const Flight = require('./models/flight');
 
 
 const app = express();
