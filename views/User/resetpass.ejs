@@ -4,22 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Password</title>
+    <title>Reset Password</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="User_Assets/css/forgetpass.css">
+    <link rel="stylesheet" href="User_Assets/css/reset.css">
 
 </head>
 
-<body>
-    <nav class="nav">
-        <a href="/" id="nav_img"><img src="User_Assets/images/delhi-your.png" alt="" height="80px" width="110px"></a>
-        <a href="/"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
-        <a href="/contactus" target="_blank"><i class="fa fa-plug" aria-hidden="true"></i>&nbsp;Contact us</a>
-        
+<body>  
         <div class="theme_toggle_container">
             <div class="tumbler__wrapper">
                 <input type="checkbox" class="togglebtn"/>
@@ -93,12 +88,12 @@
                 <p class="font-italic text-muted mb-0"></p>
             </div>
 
-            <!-- ForgetPass Form -->
-            <div class="d-flex align-items-center col-md-6 col-lg-6 forget-form"> 
+            <!-- ResetPassword Form -->
+            <div class="d-flex align-items-center col-md-6 col-lg-6 reset-form"> 
                 <style>
-                    .forget-form{
+                    .reset-form{
                         position: absolute;
-                        top: 24rem;
+                        top: 20rem;
                         left: 75%;
                         z-index: 999; 
                         text-align: center; 
@@ -110,7 +105,7 @@
                         box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
                     }
                     @media screen and (max-width : 768px){
-                        .forget-form{
+                        .reset-form{
                             top: 57rem;
                             left: 51%;
                             width: 360px;
@@ -119,24 +114,32 @@
                             text-align: center !important;                               
                         }
                     @media screen and (max-width : 450px){
-                        .forget-form{
+                        .reset-form{
                             width: 360px;
                         }
                     }
                 }
                 </style>
-                <p class = "heading" style="position:absolute; top:5%; margin-left: 14%; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold;" id = "light-dark">Forgot Password?</p>
-                <form action="/resetpass" class="needs-validation" novalidate>
+                <p class = "heading" style="position:absolute; top:5%; margin-left: 14%; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold;" id = "light-dark">Reset Password</p>
+                <form action="/login" method="POST" class="needs-validation" novalidate>
                     <div class="row box">
-                        <p class = "email-form" style = "text-align: left; margin-left: 3%; font-family: 'Poppins', sans-serif;" id = "light-dark">Enter the email associated with your account</p>
-                        <!-- Email Address -->
+                        <!-- New Password -->
                         <div class="input-group col-lg-12 mb-4">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-white px-4 border-right-0">
-                                    <i class="fa fa-envelope text-muted" id = "light-dark"></i>
+                                    <i class="fa fa-lock text-muted"></i>
                                 </span>
                             </div>
-                            <input id="email" type="email" name="username" placeholder="name@example.com" class="form-control bg-white" required>
+                            <input id="password" type="password" name="password" placeholder="New Password" class="form-control bg-white" required>
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="password" type="password" name="password" placeholder="Confirm Password" class="form-control bg-white" required>
                         </div>
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-0">
