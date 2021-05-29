@@ -1,1 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="User_Assets/css/Book_ticket.css">
+    <link rel="stylesheet" type="text/css" href="User_Assets/css/style.css">
+
+    <title>Book Flight</title>
+  </head>
+  <body style="margin:10px 30px">
+    <p style="font-size: 50px;text-transform: uppercase;padding-bottom: 10px;border-bottom: 4px solid black;text-align: center">Book Flight</p>
+    <br>
+    <div class="wrapper">
+        <div class="title">
+            Book Flight Now
+        </div>
+        <div class="form" id="bottom">
+        <form action="/bookflight" method="POST" class="needs-validation" novalidate>
+            
+                <div class="inputfield">
+                    <label>First Name</label>
+                    <input type="text" class="input" name="firstname" value="<%=user.firstname%>" required>
+                </div>
+                <div class="inputfield">
+                    <label>Last Name</label>
+                    <input type="text" class="input" name="lastname" value="<%=user.lastname%>" required>
+                </div>
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="text" name="email" class="input" value="<%=user.username%>" required>
+                </div>
+                <div class="inputfield">
+                    <label>From Place</label>
+                    <input type="text" name="place" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label>No of people</label>
+                    <div class="custom_select">
+                        <select name="people" required>
+                      <option value="">Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    </div>
+                </div>
+
+
+                <div class="inputfield">
+                    <label>Date:</label>
+                    <input type="Date" class="input" name="date" required>
+                </div>
+                <div class="inputfield">
+                    <label>Flight Type</label>
+                    <div class="custom_select">
+                        <select name="type" required>
+                      <option value="">Select</option>
+                      <option value="Business">Business</option>
+                      <option value="Economic">Economic</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label>Phone Number</label>
+                    <input type="tel" class="input" name="contact" value="<%=user.contact%>" required>
+                </div>
+
+
+
+
+                <div class="inputfield">
+                    <input type="submit" value="Book Now" class="btn">
+                </div>
+        </form>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
