@@ -259,6 +259,7 @@ figure {
     color: var(--primary-color);
 }
 
+
 /* .theme_toggle_container{
     position: absolute;
     right: 20px;
@@ -285,25 +286,25 @@ figure {
     padding: 0 6px;
     display: flex;
     position: relative;
-  }
-    
-  svg {
-      width: 15px;
-      height: 15px;
-  }
-  
-.tumbler {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: transform .5s, background-color .5s;
-  will-change: transform;
 }
-   
+
+svg {
+    width: 15px;
+    height: 15px;
+}
+
+.tumbler {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform .5s, background-color .5s;
+    will-change: transform;
+}
+
 .tumbler--night-mode {
-   transform: translateX(calc(100% - 2px));
+    transform: translateX(calc(100% - 2px));
 }
 
 .sun-svg,
@@ -586,7 +587,7 @@ figure {
     width: 100%;
     display: block;
     float: left;
-    padding: 9em 0;
+    padding: 4em 0;
     clear: both;
 }
 
@@ -2630,66 +2631,79 @@ input[type="text"] {
 .js .animate-box {
     opacity: 0;
 }
+
+
 /*Review css*/
+
 .flip-card {
-    background-color:transparent;
+    background-color: transparent;
     width: 140px;
     height: 220px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
     position: right;
-    
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(-180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+
+/* Position the front and back side */
+
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color:#212529;
-    align-items: center;
-   margin-right:100px;
-    
-    
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color:#212529;
-    color:#434343;
-    transform: rotateY(180deg);
-    margin-top: 50px;
-    margin-right:100px
-  }
-
-.contactus-form{
-      background-color: var(--primary-input-background);
-      border:2px solid var(--primary-input-border);
-  }
-  .contactus-form:focus{
-    background-color: var(--primary-input-background);
-    border:2px solid var(--primary-input-border);
 }
 
-  .contactus-button{
-      background-color: var(--primary-color)!important;
-      border:1.5px solid var(--primary-color)!important;
-  }
 
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+    background-color: #212529;
+    align-items: center;
+    margin-right: 100px;
+}
+
+
+/* Style the back side */
+
+.flip-card-back {
+    background-color: #212529;
+    color: #434343;
+    transform: rotateY(180deg);
+    margin-top: 50px;
+    margin-right: 100px
+}
+
+.contactus-form {
+    background-color: var(--primary-input-background);
+    border: 2px solid var(--primary-input-border);
+}
+
+.contactus-form:focus {
+    background-color: var(--primary-input-background);
+    border: 2px solid var(--primary-input-border);
+}
+
+.contactus-button {
+    background-color: var(--primary-color)!important;
+    border: 1.5px solid var(--primary-color)!important;
+}
