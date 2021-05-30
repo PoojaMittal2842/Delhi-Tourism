@@ -361,6 +361,18 @@ app.get('/bookedhotel',async(req,res)=>{
         res.redirect('/');
     }
 });
+
+app.get('/bookedcab',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const cabs=await Cab.find({author:user.username});
+    if(cabs.length != 0)
+    {
+        res.render('User/booked_cab',{cabs});
+    }
+    else{
+        res.redirect('/');
+    }
+});
    
 
 app.post('/ticket-data',async(req,res)=>{
