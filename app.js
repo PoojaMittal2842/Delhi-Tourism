@@ -232,6 +232,15 @@ app.get('/bookflight', async(req, res) => {
     }
 });
 
+app.get('/bookcab', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/cab', { user })
+    }
+});
+
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
     const user=await User.findById(req.user._id);
@@ -261,6 +270,22 @@ app.post('/bookflight', async(req, res) => {
     flight.type=req.body.type;
     flight.place=req.body.place;
     await flight.save();
+    res.redirect('/');
+});
+
+app.post('/bookcab', async(req, res) => {
+    var cab=new Cab();
+    const user=await User.findById(req.user._id);
+    cab.author=user.username;
+    cab.firstname=req.body.firstname;
+    cab.lastname=req.body.lastname;
+    cab.contact=req.body.contact;
+    cab.startdate=req.body.startdate;
+    cab.enddate=req.body.enddate;
+    cab.email=req.body.email;
+    cab.people=req.body.people;
+    cab.type=req.body.type;
+    await cab.save();
     res.redirect('/');
 });
 
