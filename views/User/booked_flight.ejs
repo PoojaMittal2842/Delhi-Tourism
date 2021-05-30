@@ -31,9 +31,9 @@
           <div style="display: flex;justify-content: center;">
             <button type="submit" class="btn btn-warning">Update</button>
           </form>
-          <form action="/" method="POST">
+          <form action="/deleteflight" method="POST">
             <input type="hidden" value="<%=flights[i]._id%>" name="id">
-            <button style="margin-left:15px" type="submit" class="btn btn-danger"></button>
+            <button style="margin-left:15px" type="submit" class="btn btn-danger">Delete</button>
           </form>
           </div>
         </form>
