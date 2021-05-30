@@ -340,6 +340,11 @@ app.post('/hotel-data',async(req,res)=>{
     res.render('User/updatehotel',{hotel});
 });
 
+app.post('/flight-data',async(req,res)=>{
+    const flight=await Flight.findById(req.body.id);
+    res.render('User/updateflight',{flight});
+});
+
 app.post('/updateticket',async(req,res)=>{
     const ticket= await Ticket.findById(req.body.id);
     ticket.firstname=req.body.firstname;
@@ -365,6 +370,20 @@ app.post('/updatehotel',async(req,res)=>{
     hotel.people=req.body.people;
     hotel.type=req.body.type;
     await hotel.save();
+    res.redirect('/');
+});
+
+app.post('/updateflight',async(req,res)=>{
+    const flight= await Flight.findById(req.body.id);
+    flight.firstname=req.body.firstname;
+    flight.lastname=req.body.lastname;
+    flight.contact=req.body.contact;
+    flight.date=req.body.date;
+    flight.email=req.body.email;
+    flight.people=req.body.people;
+    flight.type=req.body.type;
+    flight.place=req.body.place;
+    await flight.save();
     res.redirect('/');
 });
 
