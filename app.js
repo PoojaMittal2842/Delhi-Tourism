@@ -187,7 +187,9 @@ app.get('/adminplace', (req, res) => {
 
 app.get('/adminbooking', (req, res) => {
     Hotel.find({},function(err,hotels){
-        res.render('Admin/booking',{hotels});
+        Flight.find({},function(err,flights){
+            res.render('Admin/booking',{hotels,flights});
+        });
     });
 });
 
