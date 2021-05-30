@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Bookings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="Admin_Assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="Admin_Assets/css/booking.css">
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/style.css">
+    <link rel="stylesheet" type="text/css" href="Admin_Assets/booking.css">
 </head>
 
 <body>
@@ -286,7 +286,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-item">
-                    <a href="/adminusers" class="sidebar-nav-link">
+                    <a href="#" class="sidebar-nav-link">
                         <div>
                             <i class="fas fa-tasks"></i>
                         </div>
@@ -294,7 +294,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-item">
-                    <a href="/adminplace" class="sidebar-nav-link">
+                    <a href="#" class="sidebar-nav-link">
                         <div>
                             <i class="fas fa-spinner"></i>
                         </div>
@@ -302,7 +302,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-item">
-                    <a href="/adminbooking" class="sidebar-nav-link active">
+                    <a href="#" class="sidebar-nav-link active">
                         <div>
                             <i class="fas fa-check-circle"></i>
                         </div>
@@ -310,7 +310,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-item">
-                    <a href="/progress" class="sidebar-nav-link">
+                    <a href="#" class="sidebar-nav-link">
                         <div>
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -345,7 +345,6 @@
                                 <table class="table table-hover table-checkable order-column full-width" id="example4">
                                     <thead>
                                         <tr>
-                                            <th class="center"></th>
                                             <th class="center"> Name </th>
                                             <th class="center"> Mobile </th>
                                             <th class="center"> Email </th>
@@ -356,173 +355,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <% for(let i=0;i< hotels.length;i++){%>
                                         <tr class="odd gradeX">
                                             <td class="user-circle-img">
                                                 <img src="Admin_Assets/assets/user1.jpg" alt="">
                                             </td>
-                                            <td class="center">Rajesh</td>
-                                            <td class="center"><a href="tel:4444565756">
-                                                    4444565756 </a></td>
-                                            <td class="center"><a href="mailto:rajesh@gmail.com ">
-                                                    rajesh@gmail.com </a></td>
-                                            <td class="center">23/04/2017</td>
-                                            <td class="center">25/04/2017</td>
-                                            <td class="center">Single</td>
+                                            <td class="center"><%=hotels[i].firstname%> <%=hotels[i].lastname%></td>
+                                            <td class="center"><a href="tel:<%=hotels[i].contact%>">
+                                                <%=hotels[i].contact%> </a></td>
+                                            <td class="center"><a href="mailto:<%=hotels[i].email%> ">
+                                                <%=hotels[i].email%></a></td>
+                                            <td class="center"><%=hotels[i].checkin%></td>
+                                            <td class="center"><%=hotels[i].checkout%></td>
+                                            <td class="center"><%=hotels[i].type%></td>
                                             <td class="center">
                                                 <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
                                             </td>
                                         </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user10.jpg" alt="">
-                                            </td>
-                                            <td class="center">Pooja Patel</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:pooja@gmail.com">
-                                                    pooja@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Double</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user2.jpg" alt="">
-                                            </td>
-                                            <td class="center">Sarah Smith</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:sarah@gmail.com">
-                                                    sarah@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Coutage</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user3.jpg" alt="">
-                                            </td>
-                                            <td class="center">John Deo</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:john@gmail.com">
-                                                    john@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Double</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user4.jpg" alt="">
-                                            </td>
-                                            <td class="center">Jay Soni</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:jay@gmail.com">
-                                                    jay@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Vila</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user5.jpg" alt="">
-                                            </td>
-                                            <td class="center">Jacob Ryan</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:jacob@gmail.com">
-                                                    jacob@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Coutage</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user6.jpg" alt="">
-                                            </td>
-                                            <td class="center">Megha Trivedi</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:megha@gmail.com">
-                                                    megha@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Double</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user1.jpg" alt="">
-                                            </td>
-                                            <td class="center">Rajesh</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:rajesh@gmail.com">
-                                                    rajesh@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Vila</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user1.jpg" alt="">
-                                            </td>
-                                            <td class="center">Rajesh</td>
-                                            <td class="center"><a href="tel:4444565756">
-                                                    4444565756 </a></td>
-                                            <td class="center"><a href="mailto:rajesh@gmail.com ">
-                                                    rajesh@gmail.com </a></td>
-                                            <td class="center">23/04/2017</td>
-                                            <td class="center">25/04/2017</td>
-                                            <td class="center">Single</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user10.jpg" alt="">
-                                            </td>
-                                            <td class="center">Pooja Patel</td>
-                                            <td class="center"><a href="tel:444786876">
-                                                    444786876 </a></td>
-                                            <td class="center"><a href="mailto:pooja@gmail.com">
-                                                    pooja@gmail.com </a></td>
-                                            <td class="center">13/05/2017</td>
-                                            <td class="center">15/05/2017</td>
-                                            <td class="center">Double</td>
-                                            <td class="center">
-                                                <i class="fas fa-2x fa-exclamation" style="color: orange; padding-left: 10px;"></i>
-                                            </td>
-                                        </tr>
+                                        <%}%>
                                     </tbody>
                                 </table>
                             </div>
@@ -532,7 +382,7 @@
             </div>
         </div>
     </div>
-    <script src="Admin_Assets/js/index.js"></script>
+    <script src="Admin_Assets/index.js"></script>
 </body>
 
 </html>
