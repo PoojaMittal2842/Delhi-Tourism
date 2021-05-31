@@ -397,6 +397,11 @@ app.post('/flight-data',async(req,res)=>{
     res.render('User/updateflight',{flight});
 });
 
+app.post('/cab-data',async(req,res)=>{
+    const cab=await Cab.findById(req.body.id);
+    res.render('User/updatecab',{cab});
+});
+
 app.post('/updateticket',async(req,res)=>{
     const ticket= await Ticket.findById(req.body.id);
     ticket.firstname=req.body.firstname;
@@ -452,6 +457,20 @@ app.post('/bookhotel', async(req, res) => {
     hotel.people=req.body.people;
     hotel.type=req.body.type;
     await hotel.save();
+    res.redirect('/');
+});
+
+app.post('/updatecab', async(req, res) => {
+    const cab=await Cab.findById(req.body.id);
+    cab.firstname=req.body.firstname;
+    cab.lastname=req.body.lastname;
+    cab.contact=req.body.contact;
+    cab.startdate=req.body.startdate;
+    cab.enddate=req.body.enddate;
+    cab.email=req.body.email;
+    cab.people=req.body.people;
+    cab.type=req.body.type;
+    await cab.save();
     res.redirect('/');
 });
 
