@@ -206,6 +206,18 @@ app.get('/progress', (req, res) => {
     res.render('Admin/progress');
 });
 
+app.post('/adminblog',async(req,res)=>{
+    const user=await User.findById(req.body.id);
+    const blogs=await Blog.find({author:user._id});
+    if(blogs.length != 0)
+    {
+        res.render('User/booked_blog',{blogs});
+    }
+    else{
+        res.redirect('/');
+    }
+});
+
 app.get('/admin_blog', (req, res) => {
     res.render('Admin/blog');
 });
