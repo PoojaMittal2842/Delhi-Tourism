@@ -182,6 +182,12 @@ app.get('/adminusers', (req, res) => {
     });
 });
 
+app.get('/blogs',async(req,res)=>{
+    Blog.find({},function(err,blogs){
+        res.render('User/allblogs',{blogs});
+    });
+});
+
 app.get('/adminplace', (req, res) => {
     res.render('Admin/place');
 });
