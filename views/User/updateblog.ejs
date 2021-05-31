@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="User_Assets/css/Book_ticket.css">
+    <link rel="stylesheet" type="text/css" href="User_Assets/css/style.css">
+
+    <title>Blog</title>
+  </head>
+  <body style="margin:10px 30px">
+    <p style="font-size: 50px;text-transform: uppercase;padding-bottom: 10px;border-bottom: 4px solid black;text-align: center">Update Blog</p>
+    <br>
+    <div class="wrapper">
+        <div class="title">
+            Update your Blog
+        </div>
+        <div class="form" id="bottom">
+        <form action="/updateblog" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <input type="hidden" value="<%=blog._id%>" name="id">
+                <div class="inputfield">
+                    <label>Subject</label>
+                    <input type="text" class="input" value="<%=blog.subject%>" name="subject" required>
+                </div>
+                
+                <div style="margin-bottom: 25px;" class="inputfield">
+                    <label>Blog Picture</label>
+                    <div class="custom-file">
+                      <input type="file" class="form-control bg-white custom-file-input" name="image" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01" required>
+                      <label class="border-button-border bg-white custom-file-label" for="inputGroupFile01">Choose a picture</label>
+                    </div>
+                  </div>
+
+                <div class="inputfield">
+                    <label>Blog</label>
+                    <textarea type="text" rows="3" name="blog" class="input" required><%=blog.blog%></textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>Date</label>
+                    <input type="Date" class="input" value="<%=blog.date%>" name="date" required>
+                </div>
+
+
+
+                <div class="inputfield">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+        </form>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
