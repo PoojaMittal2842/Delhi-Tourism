@@ -404,6 +404,18 @@ app.get('/bookedcab',async(req,res)=>{
         res.redirect('/');
     }
 });
+
+app.get('/bookedblog',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const blogs=await Blog.find({author:user._id});
+    if(blogs.length != 0)
+    {
+        res.render('User/booked_blog',{blogs});
+    }
+    else{
+        res.redirect('/');
+    }
+});
    
 
 app.post('/ticket-data',async(req,res)=>{
