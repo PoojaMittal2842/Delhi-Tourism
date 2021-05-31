@@ -15,6 +15,7 @@ const flash = require('connect-flash');
 const Hotel = require('./models/hotel');
 const Flight = require('./models/flight');
 const Cab = require('./models/cab');
+const Blog = require('./models/blog');
 
 
 const app = express();
