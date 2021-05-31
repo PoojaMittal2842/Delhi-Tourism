@@ -444,6 +444,11 @@ app.post('/cab-data',async(req,res)=>{
     res.render('User/updatecab',{cab});
 });
 
+app.post('/blog-data',async(req,res)=>{
+    const blog=await Blog.findById(req.body.id);
+    res.render('User/updateblog',{blog});
+});
+
 app.post('/updateticket',async(req,res)=>{
     const ticket= await Ticket.findById(req.body.id);
     ticket.firstname=req.body.firstname;
@@ -513,6 +518,16 @@ app.post('/updatecab', async(req, res) => {
     cab.people=req.body.people;
     cab.type=req.body.type;
     await cab.save();
+    res.redirect('/');
+});
+
+app.post('/updateblog',upload.single("image"), async(req, res) => {
+    const blog=await Blog.findById(req.body.id);
+    blog.subject=req.body.subject;
+    blog.blog=req.body.blog;
+    blog.date=req.body.date;
+    blog.pic=req.file.filename;
+    await blog.save();
     res.redirect('/');
 });
 
