@@ -423,6 +423,49 @@
                     </div>
                 </div>
             </div>
+            <h1>CARS</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-box">
+                        <div class="card-body ">
+                            <div class="table-scrollable">
+                                <table class="table table-hover table-checkable order-column full-width" id="example4">
+                                    <thead>
+                                        <tr>
+                                            <th class="center"> S.No. </th>
+                                            <th class="center"> Name </th>
+                                            <th class="center"> Mobile </th>
+                                            <th class="center"> Email </th>
+                                            <th class="center"> From Date </th>
+                                            <th class="center"> Till Date </th>
+                                            <th class="center"> Type </th>
+                                            <th class="center"> Payment </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(let i=0;i< cabs.length;i++){%>
+                                        <tr class="odd gradeX">
+                                            <td class="center"><%=i+1%></td>
+                                            <td class="center"><%=cabs[i].firstname%> <%=cabs[i].lastname%></td>
+                                            <td class="center"><a href="tel:<%=cabs[i].contact%>">
+                                                <%=cabs[i].contact%> </a></td>
+                                            <td class="center"><a href="mailto:<%=cabs[i].email%> ">
+                                                <%=cabs[i].email%></a></td>
+                                            <td class="center"><%=cabs[i].startdate%></td>
+                                            <td class="center"><%=cabs[i].enddate%></td>
+                                            <td class="center"><%=cabs[i].type%></td>
+                                            <td class="center">
+                                                <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
+                                            </td>
+                                        </tr>
+                                        <%}%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="Admin_Assets/index.js"></script>
