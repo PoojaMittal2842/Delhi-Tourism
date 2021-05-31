@@ -14,6 +14,7 @@ const Ticket = require('./models/ticket');
 const flash = require('connect-flash');
 const Hotel = require('./models/hotel');
 const Flight = require('./models/flight');
+const Cab = require('./models/cab');
 
 
 const app = express();
@@ -186,7 +187,9 @@ app.get('/adminplace', (req, res) => {
 
 app.get('/adminbooking', (req, res) => {
     Hotel.find({},function(err,hotels){
-        res.render('Admin/booking',{hotels});
+        Flight.find({},function(err,flights){
+            res.render('Admin/booking',{hotels,flights});
+        });
     });
 });
 
@@ -229,6 +232,15 @@ app.get('/bookflight', async(req, res) => {
     }
 });
 
+app.get('/bookcab', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/index');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/cab', { user })
+    }
+});
+
 app.post('/bookticket', async(req, res) => {
     var ticket=new Ticket();
     const user=await User.findById(req.user._id);
@@ -261,6 +273,22 @@ app.post('/bookflight', async(req, res) => {
     res.redirect('/');
 });
 
+app.post('/bookcab', async(req, res) => {
+    var cab=new Cab();
+    const user=await User.findById(req.user._id);
+    cab.author=user.username;
+    cab.firstname=req.body.firstname;
+    cab.lastname=req.body.lastname;
+    cab.contact=req.body.contact;
+    cab.startdate=req.body.startdate;
+    cab.enddate=req.body.enddate;
+    cab.email=req.body.email;
+    cab.people=req.body.people;
+    cab.type=req.body.type;
+    await cab.save();
+    res.redirect('/');
+});
+
 
 app.post('/adminticket',async(req,res)=>{
     const user=await User.findById(req.body.adminticket);
@@ -289,6 +317,18 @@ app.post('/deleteticket',async(req,res)=>{
 app.post('/deletehotel',async(req,res)=>{
     const id=req.body.id;
     await Hotel.findByIdAndDelete(id);
+    res.redirect('/');
+});
+
+app.post('/deleteflight',async(req,res)=>{
+    const id=req.body.id;
+    await Flight.findByIdAndDelete(id);
+    res.redirect('/');
+});
+
+app.post('/deletecab',async(req,res)=>{
+    const id=req.body.id;
+    await Cab.findByIdAndDelete(id);
     res.redirect('/');
 });
 
@@ -327,6 +367,18 @@ app.get('/bookedhotel',async(req,res)=>{
         res.redirect('/');
     }
 });
+
+app.get('/bookedcab',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const cabs=await Cab.find({author:user.username});
+    if(cabs.length != 0)
+    {
+        res.render('User/booked_cab',{cabs});
+    }
+    else{
+        res.redirect('/');
+    }
+});
    
 
 app.post('/ticket-data',async(req,res)=>{
@@ -337,6 +389,11 @@ app.post('/ticket-data',async(req,res)=>{
 app.post('/hotel-data',async(req,res)=>{
     const hotel=await Hotel.findById(req.body.id);
     res.render('User/updatehotel',{hotel});
+});
+
+app.post('/flight-data',async(req,res)=>{
+    const flight=await Flight.findById(req.body.id);
+    res.render('User/updateflight',{flight});
 });
 
 app.post('/updateticket',async(req,res)=>{
@@ -364,6 +421,20 @@ app.post('/updatehotel',async(req,res)=>{
     hotel.people=req.body.people;
     hotel.type=req.body.type;
     await hotel.save();
+    res.redirect('/');
+});
+
+app.post('/updateflight',async(req,res)=>{
+    const flight= await Flight.findById(req.body.id);
+    flight.firstname=req.body.firstname;
+    flight.lastname=req.body.lastname;
+    flight.contact=req.body.contact;
+    flight.date=req.body.date;
+    flight.email=req.body.email;
+    flight.people=req.body.people;
+    flight.type=req.body.type;
+    flight.place=req.body.place;
+    await flight.save();
     res.redirect('/');
 });
 
