@@ -337,6 +337,7 @@
                     </div>
                 </div>
             </div>
+            <h1>HOTELS</h1>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-box">
@@ -345,6 +346,7 @@
                                 <table class="table table-hover table-checkable order-column full-width" id="example4">
                                     <thead>
                                         <tr>
+                                            <th class="center"> S.No. </th>
                                             <th class="center"> Name </th>
                                             <th class="center"> Mobile </th>
                                             <th class="center"> Email </th>
@@ -357,9 +359,7 @@
                                     <tbody>
                                         <% for(let i=0;i< hotels.length;i++){%>
                                         <tr class="odd gradeX">
-                                            <td class="user-circle-img">
-                                                <img src="Admin_Assets/assets/user1.jpg" alt="">
-                                            </td>
+                                            <td class="center"><%=i+1%></td>
                                             <td class="center"><%=hotels[i].firstname%> <%=hotels[i].lastname%></td>
                                             <td class="center"><a href="tel:<%=hotels[i].contact%>">
                                                 <%=hotels[i].contact%> </a></td>
@@ -368,6 +368,49 @@
                                             <td class="center"><%=hotels[i].checkin%></td>
                                             <td class="center"><%=hotels[i].checkout%></td>
                                             <td class="center"><%=hotels[i].type%></td>
+                                            <td class="center">
+                                                <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
+                                            </td>
+                                        </tr>
+                                        <%}%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>FLIGHTS</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-box">
+                        <div class="card-body ">
+                            <div class="table-scrollable">
+                                <table class="table table-hover table-checkable order-column full-width" id="example4">
+                                    <thead>
+                                        <tr>
+                                            <th class="center"> S.No. </th>
+                                            <th class="center"> Name </th>
+                                            <th class="center"> Mobile </th>
+                                            <th class="center"> Email </th>
+                                            <th class="center"> Date </th>
+                                            <th class="center"> From Place </th>
+                                            <th class="center"> Type </th>
+                                            <th class="center"> Payment </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(let i=0;i< flights.length;i++){%>
+                                        <tr class="odd gradeX">
+                                            <td class="center"><%=i+1%></td>
+                                            <td class="center"><%=flights[i].firstname%> <%=flights[i].lastname%></td>
+                                            <td class="center"><a href="tel:<%=flights[i].contact%>">
+                                                <%=flights[i].contact%> </a></td>
+                                            <td class="center"><a href="mailto:<%=flights[i].email%> ">
+                                                <%=flights[i].email%></a></td>
+                                            <td class="center"><%=flights[i].date%></td>
+                                            <td class="center"><%=flights[i].place%></td>
+                                            <td class="center"><%=flights[i].type%></td>
                                             <td class="center">
                                                 <i class="fas fa-2x fa-check-circle" style="color: green;"></i>
                                             </td>
