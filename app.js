@@ -15,6 +15,7 @@ const flash = require('connect-flash');
 const Hotel = require('./models/hotel');
 const Flight = require('./models/flight');
 const Cab = require('./models/cab');
+const Blog = require('./models/blog');
 
 
 const app = express();
@@ -181,6 +182,12 @@ app.get('/adminusers', (req, res) => {
     });
 });
 
+app.get('/blogs',async(req,res)=>{
+    Blog.find({},function(err,blogs){
+        res.render('User/allblogs',{blogs});
+    });
+});
+
 app.get('/adminplace', (req, res) => {
     res.render('Admin/place');
 });
@@ -188,13 +195,27 @@ app.get('/adminplace', (req, res) => {
 app.get('/adminbooking', (req, res) => {
     Hotel.find({},function(err,hotels){
         Flight.find({},function(err,flights){
-            res.render('Admin/booking',{hotels,flights});
+            Cab.find({},function(err,cabs){
+                res.render('Admin/booking',{hotels,flights,cabs});
+            });  
         });
     });
 });
 
 app.get('/progress', (req, res) => {
     res.render('Admin/progress');
+});
+
+app.post('/adminblog',async(req,res)=>{
+    const user=await User.findById(req.body.id);
+    const blogs=await Blog.find({author:user._id});
+    if(blogs.length != 0)
+    {
+        res.render('User/booked_blog',{blogs});
+    }
+    else{
+        res.redirect('/');
+    }
 });
 
 app.get('/admin_blog', (req, res) => {
@@ -289,6 +310,28 @@ app.post('/bookcab', async(req, res) => {
     res.redirect('/');
 });
 
+app.post('/bookblog',upload.single("image"), async(req, res) => {
+    var blog=new Blog();
+    blog.author=req.body.author;
+    blog.firstname=req.body.firstname;
+    blog.lastname=req.body.lastname;
+    blog.subject=req.body.subject;
+    blog.date=req.body.date;
+    blog.blog=req.body.blog;
+    blog.pic=req.file.filename;
+    await blog.save();
+    res.redirect('/');
+});
+
+app.get('/bookblog', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/nologin');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/blog', { user })
+    }
+});
+
 
 app.post('/adminticket',async(req,res)=>{
     const user=await User.findById(req.body.adminticket);
@@ -329,6 +372,12 @@ app.post('/deleteflight',async(req,res)=>{
 app.post('/deletecab',async(req,res)=>{
     const id=req.body.id;
     await Cab.findByIdAndDelete(id);
+    res.redirect('/');
+});
+
+app.post('/deleteblog',async(req,res)=>{
+    const id=req.body.id;
+    await Blog.findByIdAndDelete(id);
     res.redirect('/');
 });
 
@@ -379,6 +428,18 @@ app.get('/bookedcab',async(req,res)=>{
         res.redirect('/');
     }
 });
+
+app.get('/bookedblog',async(req,res)=>{
+    const user=await User.findById(req.user._id);
+    const blogs=await Blog.find({author:user._id});
+    if(blogs.length != 0)
+    {
+        res.render('User/booked_blog',{blogs});
+    }
+    else{
+        res.redirect('/');
+    }
+});
    
 
 app.post('/ticket-data',async(req,res)=>{
@@ -394,6 +455,16 @@ app.post('/hotel-data',async(req,res)=>{
 app.post('/flight-data',async(req,res)=>{
     const flight=await Flight.findById(req.body.id);
     res.render('User/updateflight',{flight});
+});
+
+app.post('/cab-data',async(req,res)=>{
+    const cab=await Cab.findById(req.body.id);
+    res.render('User/updatecab',{cab});
+});
+
+app.post('/blog-data',async(req,res)=>{
+    const blog=await Blog.findById(req.body.id);
+    res.render('User/updateblog',{blog});
 });
 
 app.post('/updateticket',async(req,res)=>{
@@ -451,6 +522,30 @@ app.post('/bookhotel', async(req, res) => {
     hotel.people=req.body.people;
     hotel.type=req.body.type;
     await hotel.save();
+    res.redirect('/');
+});
+
+app.post('/updatecab', async(req, res) => {
+    const cab=await Cab.findById(req.body.id);
+    cab.firstname=req.body.firstname;
+    cab.lastname=req.body.lastname;
+    cab.contact=req.body.contact;
+    cab.startdate=req.body.startdate;
+    cab.enddate=req.body.enddate;
+    cab.email=req.body.email;
+    cab.people=req.body.people;
+    cab.type=req.body.type;
+    await cab.save();
+    res.redirect('/');
+});
+
+app.post('/updateblog',upload.single("image"), async(req, res) => {
+    const blog=await Blog.findById(req.body.id);
+    blog.subject=req.body.subject;
+    blog.blog=req.body.blog;
+    blog.date=req.body.date;
+    blog.pic=req.file.filename;
+    await blog.save();
     res.redirect('/');
 });
 
