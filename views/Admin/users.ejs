@@ -589,6 +589,12 @@
                                     <input type="submit" value="Booked Tickets" class="link-button">
                                 </div>
                             </form>
+                            <form action="/adminblog" method="POST">
+                            <div style="display: flex;justify-content: center;">
+                                <input type="hidden" value="<%=users[i]._id%>" name="id">
+                                <input type="submit" value="Blogs" class="link-button">
+                            </div>
+                            </form>
                             <form action="/deleteuser" method="POST">
                                 <div style="display: flex;justify-content: center;">
                                     <input type="hidden" value="<%=users[i]._id%>" name="deleteuser">
