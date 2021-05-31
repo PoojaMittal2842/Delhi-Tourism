@@ -292,6 +292,19 @@ app.post('/bookcab', async(req, res) => {
     res.redirect('/');
 });
 
+app.post('/bookblog',upload.single("image"), async(req, res) => {
+    var blog=new Blog();
+    blog.author=req.body.author;
+    blog.firstname=req.body.firstname;
+    blog.lastname=req.body.lastname;
+    blog.subject=req.body.subject;
+    blog.date=req.body.date;
+    blog.blog=req.body.blog;
+    blog.pic=req.file.filename;
+    await blog.save();
+    res.redirect('/');
+});
+
 app.get('/bookblog', async(req, res) => {
     if (req.user == undefined) {
         res.render('User/nologin');
