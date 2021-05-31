@@ -292,6 +292,15 @@ app.post('/bookcab', async(req, res) => {
     res.redirect('/');
 });
 
+app.get('/bookblog', async(req, res) => {
+    if (req.user == undefined) {
+        res.render('User/nologin');
+    } else {
+        const user = await User.findById(req.user._id);
+        res.render('User/blog', { user })
+    }
+});
+
 
 app.post('/adminticket',async(req,res)=>{
     const user=await User.findById(req.body.adminticket);
