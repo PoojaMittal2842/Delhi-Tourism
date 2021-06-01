@@ -14,8 +14,9 @@
   "author": "Kush",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
+    "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
@@ -31,8 +32,7 @@
     "passport-local-mongoose": "^6.0.1",
     "request": "^2.88.2",
     "require": "^0.4.4",
-    "sanitize-html": "^1.27.4",
-    "connect-flash": "^0.1.1"
+    "sanitize-html": "^1.27.4"
   },
   "bugs": {
     "url": "https://github.com/PoojaMittal2842/Delhi-Tourism/issues"

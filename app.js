@@ -228,7 +228,8 @@ app.get('/addnewplace', (req, res) => {
 
 app.get('/bookticket', async(req, res) => {
     if (req.user == undefined) {
-        res.render('User/Book_ticket');
+        const user = new User();
+        res.render('User/Book_ticket' , { user });
     } else {
         const user = await User.findById(req.user._id);
         res.render('User/Book_ticket', { user })
